@@ -5,6 +5,7 @@
       <NavigationBar />
       123123
     </div>
+    <AboutFeasts />
   </div>
 </template>
 
