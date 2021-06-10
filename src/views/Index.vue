@@ -12,10 +12,13 @@
 import { ref, reactive } from 'vue'
 // 导航栏组件
 import NavigationBar from '@/components/common/navigationBar'
+import AboutFeasts from '@/components/common/aboutFeasts'
+
 export default {
   name: 'index',
   components: {
     NavigationBar,
+    AboutFeasts
   },
 }
 </script>

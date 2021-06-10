@@ -7,18 +7,7 @@ import store from './store'
 import '../public/css/main.css'
 
 // element-plus
-import {
-  ElButton,
-  ElSelect,
-  ElContainer,
-  ElHeader,
-  ElMain,
-  ElFooter,
-  ElRow,
-  ElCol,
-  ElImage,
-  ElIcon
-} from 'element-plus'
+import { ElButton, ElSelect, ElContainer, ElHeader, ElMain, ElFooter, ElRow, ElCol, ElImage, ElIcon } from 'element-plus'
 
 let app = createApp(App)
 
