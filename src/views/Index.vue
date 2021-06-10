@@ -1,24 +1,23 @@
 <template>
   <div>
-    <el-button type="primary">主要按钮</el-button>
-    <div class="wwu">
-      123
-        <p>123</p>
+    <div class="header">
+      <!-- 导航栏 -->
+      <NavigationBar />
+      123123
     </div>
   </div>
 </template>
 
 <script>
+import { ref, reactive } from 'vue'
+// 导航栏组件
+import NavigationBar from '@/components/common/navigationBar'
 export default {
-  name: 'index'
+  name: 'index',
+  components: {
+    NavigationBar,
+  },
 }
 </script>
 
-<style lang="less" scoped>
-.wwu {
-  color: pink;
-  p {
-    color: red;
-  }
-}
-</style>
+<style lang="less" scoped></style>

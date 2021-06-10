@@ -1,0 +1,16 @@
+/* 媒体查询 */
+@media screen and (max-width: 991px) {
+  html {
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+  html {
+    font-size: 14px;
+  }
+}
