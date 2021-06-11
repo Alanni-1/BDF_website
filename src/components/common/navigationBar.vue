@@ -73,16 +73,50 @@ export default {
       // 是否展示toggle的list
       isShowNavList = ref(false),
       // 是否开启夜间模式
-      isOpenDarkModel = ref(false)
+      isOpenDarkModel = ref(false),
+      /* 背景色 */
+      bgc = '#fff',
+      /* 1级文字颜色 */
+      color1 = '#606266',
+      /* 2级文字颜色 */
+      color2 = '#909399',
+      /* 3级文字颜色 */
+      color3 = '#C0C4CC',
+      /* 导航栏专属1级字体 */
+      navTextColor = '#606266',
+      /*  导航栏专属2级字体*/
+      navSecondaryTextColor = '#909399',
+      /* 导航栏专属背景 */
+      navBgc = '#fff'
 
     // 监听滚动
     window.onscroll = () => {
       // 判断滚动
       if (document.documentElement.scrollTop != 0) {
+        // 开启背景
         isShowBgc.value = true
+        // 判断是否开启夜间模式
+        if (isOpenDarkModel.value) {
+          navTextColor = '#fdfffc'
+          navSecondaryTextColor = '#fdfffc'
+        } else {
+          navTextColor = '#606266'
+          navSecondaryTextColor = '#606266'
+        }
       } else {
         isShowBgc.value = false
+        // 顶部文字固定白色
+        navTextColor = '#fdfffc'
+        // 顶部二级文字颜色
+        navSecondaryTextColor = '#fdfffc'
       }
+
+      // 修改全局变量
+      document.documentElement.style.setProperty('--navTextColor', navTextColor)
+      document.documentElement.style.setProperty(
+        '--navSecondaryTextColor',
+        navSecondaryTextColor
+      )
     }
     // window尺寸改变
     window.onresize = () => {
@@ -116,15 +150,6 @@ export default {
       isOpenDarkModel.value = !isOpenDarkModel.value
       console.log(isOpenDarkModel.value)
 
-      /* 背景色 */
-      let bgc = '#fff',
-        /* 1级文字颜色 */
-        color1 = '#606266',
-        /* 2级文字颜色 */
-        color2 = '#909399',
-        /* 3级文字颜色 */
-        color3 = '#C0C4CC'
-
       // 修改颜色
       if (isOpenDarkModel.value) {
         bgc = '#343a40'
@@ -134,6 +159,12 @@ export default {
         color2 = '#b7b7b7'
         /* 3级文字颜色 */
         color3 = '#C0C4CC'
+        /* 导航栏专属1级字体 */
+        navTextColor = '#fdfffc'
+        /*  导航栏专属2级字体*/
+        navSecondaryTextColor = '#b7b7b7'
+        /* 导航栏专属背景 */
+        navBgc = '#343a40'
       } else {
         bgc = '#fff'
         /* 1级文字颜色 */
@@ -142,6 +173,11 @@ export default {
         color2 = '#909399'
         /* 3级文字颜色 */
         color3 = '#C0C4CC'
+        navTextColor = '#606266'
+        /*  导航栏专属2级字体*/
+        navSecondaryTextColor = '#909399'
+        /* 导航栏专属背景 */
+        navBgc = '#fff'
       }
 
       //修改CSS中的全局变量
@@ -149,6 +185,17 @@ export default {
       document.documentElement.style.setProperty('--color1', color1)
       document.documentElement.style.setProperty('--color2', color2)
       document.documentElement.style.setProperty('--color3', color3)
+      document.documentElement.style.setProperty('--navBgc', navBgc)
+      if (isShowBgc.value) {
+        document.documentElement.style.setProperty(
+          '--navTextColor',
+          navTextColor
+        )
+        document.documentElement.style.setProperty(
+          '--navSecondaryTextColor',
+          navSecondaryTextColor
+        )
+      }
     }
 
     return {
@@ -165,7 +212,8 @@ export default {
 
 <style lang="less" scoped>
 .navBoxBgc {
-  background-color: var(--bgc);
+  background-color: var(--navBgc);
+  z-index: 999;
 }
 .navBox {
   width: 100%;
@@ -182,7 +230,7 @@ export default {
 
     overflow: hidden;
     li {
-      background-color: var(--bgc);
+      background-color: var(--navBgc);
       padding: 15px 30px;
       text-align: center;
       font-size: 16px;
@@ -195,7 +243,6 @@ export default {
     li:hover {
       color: var(--activeLink);
     }
-
   }
   div.navLeft {
     height: 5.25rem;
@@ -205,12 +252,12 @@ export default {
     div.logo {
       width: 6.25rem;
       height: 100%;
-      background-image: url('https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=12793245,230695580&fm=26&gp=0.jpg');
+      background-image: url('../../assets/image/端午logo.png');
       background-size: cover;
       margin-right: 1.25rem;
     }
     h1 {
-      color: var(--color1);
+      color: var(--navTextColor);
     }
     div.text {
     }
@@ -225,7 +272,7 @@ export default {
       a {
         padding: 0.375rem;
         font-size: 1rem;
-        color: var(--color1);
+        color: var(--navTextColor);
         font-weight: 700;
         transition: all 0.2s;
       }
@@ -236,7 +283,7 @@ export default {
         cursor: pointer;
 
         font-weight: 700;
-        color: var(--color1);
+        color: var(--navTextColor);
       }
       i:hover {
         color: var(--activeLink);
@@ -251,29 +298,29 @@ export default {
           padding: 0.4999rem 2.1874rem 0.4999rem 1rem;
           width: 18.75rem;
           border-radius: 1.8749rem;
-          border: 2px solid var(--color1);
-          color: var(--color1);
+          border: 2px solid var(--navTextColor);
+          color: var(--navTextColor);
         }
 
         input::-webkit-input-placeholder {
           /* WebKit, Blink, Edge */
-          color: var(--color2);
+          color: var(--navSecondaryTextColor);
         }
         :-moz-placeholder {
           /* Mozilla Firefox 4 to 18 */
-          color: var(--color2);
+          color: var(--navSecondaryTextColor);
         }
         ::-moz-placeholder {
           /* Mozilla Firefox 19+ */
-          color: var(--color2);
+          color: var(--navSecondaryTextColor);
         }
         input:-ms-input-placeholder {
           /* Internet Explorer 10-11 */
-          color: var(--color2);
+          color: var(--navSecondaryTextColor);
         }
         input::-ms-input-placeholder {
           /* Microsoft Edge */
-          color: var(--color2);
+          color: var(--navSecondaryTextColor);
         }
         i {
           position: absolute;
@@ -283,7 +330,7 @@ export default {
           font-weight: 700;
           cursor: pointer;
           transition: all 0.2s;
-          color: var(--color1);
+          color: var(--navTextColor);
         }
         i:hover {
           color: var(--activeLink);
@@ -300,11 +347,11 @@ export default {
       padding: 0 0.5rem;
       i {
         font-size: 20px;
-        color: var(--color1);
+        color: var(--navTextColor);
         cursor: pointer;
       }
       i:hover {
-        color:var(--activeLink)
+        color: var(--activeLink);
       }
     }
   }

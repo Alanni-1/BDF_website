@@ -7,4 +7,11 @@
   --color1: #606266;
   /* 2级文字颜色 */
   --color2: #909399;
+
+  /* 导航栏专属1级字体 */
+  --navTextColor: #fdfffc;
+  /*  导航栏专属2级字体*/
+  --navSecondaryTextColor: #fdfffc;
+  /* 导航栏专属背景 */
+  --navBgc: #fff;
 }

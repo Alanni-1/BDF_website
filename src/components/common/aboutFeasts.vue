@@ -1,7 +1,7 @@
 <template>
   <!-- 关于节日的组件 -->
   <div class="about-feasts">
-    <el-row type="flex" :gutter="30">
+    <el-row :gutter="30">
       <!-- 主要内容：介绍节日 -->
       <el-col :md="12" :sm="24" class="about-feasts-introduce">
         <a class="title" href="/">端午节</a>
@@ -44,7 +44,7 @@
   </div>
 </template>
 
-<script lang='ts'>
+<script lang="ts">
 export default {
   name: 'aboutFeasts',
   setup() {
@@ -53,13 +53,18 @@ export default {
 }
 </script>
 
-<style lang='less'>
+<style lang="less">
 .about-feasts {
+
   @titleColor: #000;
 
   padding: 3rem 3rem;
 
   border: 1px solid #e6e6e6;
+
+  background-color: var(--bgc);
+
+  color: var(--color1);
 
   // 公共内容: 列表
   .about-feasts-list {
@@ -71,7 +76,7 @@ export default {
       padding: 0.4rem 0;
 
       a {
-        color: #000;
+        color: var(--color1);
       }
     }
   }
@@ -82,7 +87,7 @@ export default {
 
     font-size: 1.2rem;
 
-    color: @titleColor;
+    color: var(--color1);
   }
 
   // 主要内容
@@ -90,6 +95,7 @@ export default {
     // 字体：草书
     font-family: cursive;
 
+    color: var(--color1);
     // 标题
     a.title {
       // 标题公共属性
@@ -98,16 +104,14 @@ export default {
       width: 100%;
 
       font-size: 2.5rem;
+      color: var(--color1);
     }
-
     // 内容
     p {
       padding: 1rem;
-
-      color: #606266;
+      color: var(--color2);
       line-height: 1.5rem;
       letter-spacing: 0.06rem;
-
       font-size: 1rem;
     }
   }

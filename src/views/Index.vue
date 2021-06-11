@@ -3,7 +3,7 @@
     <div class="header">
       <!-- 导航栏 -->
       <NavigationBar />
-      123123
+      <div class="box"></div>
     </div>
     <AboutFeasts />
   </div>
@@ -24,4 +24,12 @@ export default {
 }
 </script>
 
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+.box {
+  height: 400px;
+  // width: 100vw;
+  width: 100%;
+  background-color: pink;
+} 
+
+</style>
