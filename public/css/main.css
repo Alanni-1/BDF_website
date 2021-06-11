@@ -1,6 +1,10 @@
+/* // 变量样式 */
+@import "./cssFolder/variable.css";
 /* // 默认样式 */
 @import "./cssFolder/base.css";
 /* // 字体图标 */
 @import "./cssFolder/iconfont.css";
 /* // 媒体查询 */
 @import "./cssFolder/media.css";
+/* // element 样式修改 */
+@import "./cssFolder/modifyElement.css";

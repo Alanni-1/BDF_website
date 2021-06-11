@@ -5,7 +5,7 @@ import store from './store'
 
 // 导入入口css
 import '../public/css/main.css'
-
+import 'element-plus/lib/theme-chalk/base.css'
 // element-plus
 import {
   ElButton,
@@ -17,11 +17,15 @@ import {
   ElRow,
   ElCol,
   ElImage,
-  ElIcon
+  ElIcon,
+  ElDropdown,
+  ElDropdownItem,
+  ElDropdownMenu,
+  ElCollapseTransition
 } from 'element-plus'
 
 let app = createApp(App)
-
+app.component(ElCollapseTransition.name, ElCollapseTransition)
 app
   .use(ElButton)
   .use(ElSelect)
@@ -33,6 +37,9 @@ app
   .use(ElCol)
   .use(ElImage)
   .use(ElIcon)
+  .use(ElDropdown)
+  .use(ElDropdownItem)
+  .use(ElDropdownMenu)
   .use(store)
   .use(router)
   .mount('#app')
