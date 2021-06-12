@@ -25,7 +25,13 @@
       <Celebrations />
       <Figure />
       <!-- 轮播图 -->
-      <el-carousel type="card" height="300px" trigger="click" loop arrow="never">
+      <el-carousel
+        type="card"
+        height="300px"
+        trigger="click"
+        loop
+        arrow="never"
+      >
         <el-carousel-item>
           <div class="wu1"></div>
         </el-carousel-item>
@@ -41,6 +47,7 @@
       </el-carousel>
     </div>
     <AboutFeasts />
+    <Copyright />
   </div>
 </template>
 
@@ -55,6 +62,7 @@ import Features from '@/components/common/features.vue'
 import Celebrations from '@/components/common/celebrations.vue'
 // 庆祝活动组件
 import Figure from '@/components/common/figure.vue'
+import Copyright from '@/components/common/copyright'
 
 export default {
   name: 'index',
@@ -63,8 +71,9 @@ export default {
     AboutFeasts,
     Features,
     Celebrations,
-    Figure
-  }
+    Figure,
+    Copyright
+  },
 }
 </script>
 

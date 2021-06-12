@@ -56,16 +56,20 @@ export default {
 <style lang="less">
 .about-feasts {
 
-  @titleColor: #000;
+  // 主要颜色
+  @primaryColor: var(--color1);
+  // 次要颜色
+  @secondaryColor: var(--color2);
 
   padding: 3rem 3rem;
 
-  border: 1px solid #e6e6e6;
-
   background-color: var(--bgc);
 
+<<<<<<< HEAD
   color: var(--mainColor);
 
+=======
+>>>>>>> 3f40bfa52a2430e87e83fcaebf46a22223d95cff
   // 公共内容: 列表
   .about-feasts-list {
     padding-top: 0.5rem;
@@ -76,7 +80,11 @@ export default {
       padding: 0.4rem 0;
 
       a {
+<<<<<<< HEAD
         color: var(--mainColor);
+=======
+        color: @primaryColor;
+>>>>>>> 3f40bfa52a2430e87e83fcaebf46a22223d95cff
       }
     }
   }
@@ -87,7 +95,11 @@ export default {
 
     font-size: 1.2rem;
 
+<<<<<<< HEAD
     color: var(--mainColor);
+=======
+    color: @primaryColor;
+>>>>>>> 3f40bfa52a2430e87e83fcaebf46a22223d95cff
   }
 
   // 主要内容
@@ -95,7 +107,10 @@ export default {
     // 字体：草书
     font-family: cursive;
 
+<<<<<<< HEAD
     color: var(--mainColor);
+=======
+>>>>>>> 3f40bfa52a2430e87e83fcaebf46a22223d95cff
     // 标题
     a.title {
       // 标题公共属性
@@ -104,22 +119,25 @@ export default {
       width: 100%;
 
       font-size: 2.5rem;
+<<<<<<< HEAD
       color: var(--mainColor);
+=======
+>>>>>>> 3f40bfa52a2430e87e83fcaebf46a22223d95cff
     }
     // 内容
     p {
       padding: 1rem;
-      color: var(--color2);
+
+      color: @secondaryColor;
+
+      font-size: 1rem;
       line-height: 1.5rem;
       letter-spacing: 0.06rem;
-      font-size: 1rem;
     }
   }
 
   // 次要内容
   .about-feasts-more {
-    color: #fff;
-
     & > a.title {
       // 标题公共属性
       .about-feasts-title;
