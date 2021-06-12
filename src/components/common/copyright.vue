@@ -30,7 +30,7 @@ export default {
 .copyright {
   padding: 1rem 3rem;
 
-  color: var(--color1);
+  color: var(--maanColor);
 
   @media (max-width: 992px) {
     & > div {
@@ -76,7 +76,7 @@ export default {
 
         a {
           text-decoration: none;
-          color: var(--color1);
+          color: var(--mainColor);
         }
       }
     }

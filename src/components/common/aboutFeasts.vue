@@ -55,11 +55,6 @@ export default {
 
 <style lang="less" scoped>
 .about-feasts {
-  // 主要颜色
-  @primaryColor: var(--color1);
-  // 次要颜色
-  @secondaryColor: var(--color2);
-
   padding: 3rem 3rem;
 
   background-color: var(--bgc);
@@ -110,7 +105,7 @@ export default {
     p {
       padding: 1rem;
 
-      color: @secondaryColor;
+      color: var(--navSecondaryColor);
 
       font-size: 1rem;
       line-height: 1.5rem;

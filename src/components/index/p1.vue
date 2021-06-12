@@ -127,7 +127,7 @@ div.warp {
           }
 
           span.time {
-            color: var(--color2);
+            color: var(--navSecondaryColor);
           }
         }
       }

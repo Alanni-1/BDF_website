@@ -84,7 +84,7 @@ div.warp {
     border: none;
 
     &:hover {
-      background-color: #ffd700;
+      background-color: var(--activeLink);
       color: #000000;
     }
   }
