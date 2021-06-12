@@ -23,6 +23,7 @@
     <div class="main">
       <Features />
       <Celebrations />
+      <HotActivity />
       <P1 />
       <P2 />
       <Figure />
@@ -68,6 +69,8 @@ import Copyright from '@/components/common/copyright'
 import P1 from '@/components/index/p1'
 import P2 from '@/components/index/p2'
 
+import HotActivity from '@/components/index/hotActivity'
+
 export default {
   name: 'index',
   components: {
@@ -78,7 +81,8 @@ export default {
     Figure,
     Copyright,
     P1,
-    P2
+    P2,
+    HotActivity
   }
 }
 </script>
