@@ -46,6 +46,9 @@
         </el-carousel-item>
       </el-carousel>
     </div>
+    <div class="content">
+      <P2 />
+    </div>
     <AboutFeasts />
     <Copyright />
   </div>
@@ -63,6 +66,7 @@ import Celebrations from '@/components/common/celebrations.vue'
 // 庆祝活动组件
 import Figure from '@/components/common/figure.vue'
 import Copyright from '@/components/common/copyright'
+import P2 from '@/components/index/p1'
 
 export default {
   name: 'index',
@@ -72,8 +76,9 @@ export default {
     Features,
     Celebrations,
     Figure,
-    Copyright
-  },
+    Copyright,
+    P2
+  }
 }
 </script>
 

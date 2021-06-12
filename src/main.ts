@@ -17,6 +17,8 @@ import {
   ElRow,
   ElCol,
   ElImage,
+  ElCard,
+  ElTag,
   ElIcon,
   ElDropdown,
   ElDropdownItem,
@@ -38,6 +40,8 @@ app
   .use(ElRow)
   .use(ElCol)
   .use(ElImage)
+  .use(ElCard)
+  .use(ElTag)
   .use(ElIcon)
   .use(ElDropdown)
   .use(ElDropdownItem)

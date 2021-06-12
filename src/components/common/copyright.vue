@@ -26,7 +26,7 @@ export default {
 }
 </script>
 
-<style lang='less'>
+<style lang='less' scoped>
 .copyright {
   padding: 1rem 3rem;
 

@@ -53,9 +53,8 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 .about-feasts {
-
   // 主要颜色
   @primaryColor: var(--color1);
   // 次要颜色
