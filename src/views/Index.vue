@@ -23,6 +23,8 @@
     <div class="main">
       <Features />
       <Celebrations />
+      <P1 />
+      <P2 />
       <Figure />
       <!-- 轮播图 -->
       <el-carousel
@@ -46,9 +48,6 @@
         </el-carousel-item>
       </el-carousel>
     </div>
-    <div class="content">
-      <P2 />
-    </div>
     <AboutFeasts />
     <Copyright />
   </div>
@@ -66,7 +65,8 @@ import Celebrations from '@/components/common/celebrations.vue'
 // 庆祝活动组件
 import Figure from '@/components/common/figure.vue'
 import Copyright from '@/components/common/copyright'
-import P2 from '@/components/index/p1'
+import P1 from '@/components/index/p1'
+import P2 from '@/components/index/p2'
 
 export default {
   name: 'index',
@@ -77,6 +77,7 @@ export default {
     Celebrations,
     Figure,
     Copyright,
+    P1,
     P2
   }
 }

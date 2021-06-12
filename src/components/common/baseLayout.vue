@@ -1,8 +1,8 @@
 <template>
   <div class="base-layout">
-    <header class="baseLayout-title">
+    <h1 class="baseLayout-title">
       <slot name="title"></slot>
-    </header>
+    </h1>
     <div class="base-content">
       <slot name="content"></slot>
     </div>
@@ -17,12 +17,11 @@ export default {
 
 <style lang='less' scoped>
 .base-layout {
-  padding: 2.8125rem;
+  padding: 3rem 3rem 0 3rem;
 
-  header.baseLayout-title {
-    padding: 3rem;
+  h1.baseLayout-title {
+    padding: 2.8125rem;
 
-    font-size: 1.5rem;
     text-align: center;
   }
 }
