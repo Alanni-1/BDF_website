@@ -64,7 +64,6 @@ export default {
   padding: 3rem 3rem;
 
   background-color: var(--bgc);
-  border: 1px solid #e6e6e6;
 
   // 公共内容: 列表
   .about-feasts-list {
