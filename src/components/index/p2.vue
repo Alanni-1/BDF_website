@@ -11,7 +11,7 @@
             v-for="item of [1, 2, 3, 4]"
             :key="item"
           >
-            <el-card class="box-card item">
+            <el-card class="box-card item" shadow="hover">
               <div class="item-body">
                 <div class="img-warp">
                   <img src="~@/assets/image/s3.png" />
@@ -28,6 +28,7 @@
             </el-card>
           </el-col>
         </el-row>
+        <!-- 更多按钮 -->
         <el-row type="flex" justify="center">
           <el-col span="24">
             <el-button class="learn-more" type="primary" round>
@@ -69,8 +70,13 @@ div.warp {
           padding: 1rem 0 1rem 2rem;
 
           h3 {
-            margin-bottom: 0.5rem;
-            font-size: 2rem;
+            margin-bottom: 1rem;
+
+            font-size: 1.5rem;
+          }
+
+          p {
+            line-height: 28px;
           }
         }
       }
