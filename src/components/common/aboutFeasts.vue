@@ -56,15 +56,15 @@ export default {
 <style lang="less">
 .about-feasts {
 
-  @titleColor: #000;
+  // 主要颜色
+  @primaryColor: var(--color1);
+  // 次要颜色
+  @secondaryColor: var(--color2);
 
   padding: 3rem 3rem;
 
-  border: 1px solid #e6e6e6;
-
   background-color: var(--bgc);
-
-  color: var(--color1);
+  border: 1px solid #e6e6e6;
 
   // 公共内容: 列表
   .about-feasts-list {
@@ -76,7 +76,7 @@ export default {
       padding: 0.4rem 0;
 
       a {
-        color: var(--color1);
+        color: @primaryColor;
       }
     }
   }
@@ -87,7 +87,7 @@ export default {
 
     font-size: 1.2rem;
 
-    color: var(--color1);
+    color: @primaryColor;
   }
 
   // 主要内容
@@ -95,7 +95,6 @@ export default {
     // 字体：草书
     font-family: cursive;
 
-    color: var(--color1);
     // 标题
     a.title {
       // 标题公共属性
@@ -104,22 +103,21 @@ export default {
       width: 100%;
 
       font-size: 2.5rem;
-      color: var(--color1);
     }
     // 内容
     p {
       padding: 1rem;
-      color: var(--color2);
+
+      color: @secondaryColor;
+
+      font-size: 1rem;
       line-height: 1.5rem;
       letter-spacing: 0.06rem;
-      font-size: 1rem;
     }
   }
 
   // 次要内容
   .about-feasts-more {
-    color: #fff;
-
     & > a.title {
       // 标题公共属性
       .about-feasts-title;
