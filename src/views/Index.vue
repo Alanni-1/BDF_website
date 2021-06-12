@@ -5,6 +5,9 @@
       <NavigationBar />
       <div class="box"></div>
     </div>
+    <div class="content">
+      <P2 />
+    </div>
     <AboutFeasts />
     <Copyright />
   </div>
@@ -16,14 +19,16 @@ import { ref, reactive } from 'vue'
 import NavigationBar from '@/components/common/navigationBar'
 import AboutFeasts from '@/components/common/aboutFeasts'
 import Copyright from '@/components/common/copyright'
+import P2 from '@/components/index/p1'
 
 export default {
   name: 'index',
   components: {
     NavigationBar,
     AboutFeasts,
-    Copyright
-  },
+    Copyright,
+    P2
+  }
 }
 </script>
 
@@ -34,5 +39,4 @@ export default {
   width: 100%;
   background-color: pink;
 }
-
 </style>
