@@ -64,7 +64,7 @@ export default {
 
   background-color: var(--bgc);
 
-  color: var(--color1);
+  color: var(--mainColor);
 
   // 公共内容: 列表
   .about-feasts-list {
@@ -76,7 +76,7 @@ export default {
       padding: 0.4rem 0;
 
       a {
-        color: var(--color1);
+        color: var(--mainColor);
       }
     }
   }
@@ -87,7 +87,7 @@ export default {
 
     font-size: 1.2rem;
 
-    color: var(--color1);
+    color: var(--mainColor);
   }
 
   // 主要内容
@@ -95,7 +95,7 @@ export default {
     // 字体：草书
     font-family: cursive;
 
-    color: var(--color1);
+    color: var(--mainColor);
     // 标题
     a.title {
       // 标题公共属性
@@ -104,7 +104,7 @@ export default {
       width: 100%;
 
       font-size: 2.5rem;
-      color: var(--color1);
+      color: var(--mainColor);
     }
     // 内容
     p {

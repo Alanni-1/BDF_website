@@ -21,7 +21,9 @@ import {
   ElDropdown,
   ElDropdownItem,
   ElDropdownMenu,
-  ElCollapseTransition
+  ElCollapseTransition,
+  ElCarousel,
+  ElCarouselItem
 } from 'element-plus'
 
 let app = createApp(App)
@@ -40,6 +42,8 @@ app
   .use(ElDropdown)
   .use(ElDropdownItem)
   .use(ElDropdownMenu)
+  .use(ElCarousel)
+  .use(ElCarouselItem)
   .use(store)
   .use(router)
   .mount('#app')

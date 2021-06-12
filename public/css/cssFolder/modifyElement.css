@@ -1,1 +1,11 @@
-/* 导航栏按钮样式 */
+/* 轮播图小圆点样式 */
+.el-carousel__indicator.is-active button {
+  background-color: var(--activeLink) !important;
+}
+
+.el-carousel__button {
+  background-color: #fff !important;
+  border-radius: 50% !important;
+  width: 10px !important;
+  height: 10px !important;
+}

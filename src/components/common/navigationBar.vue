@@ -77,11 +77,9 @@ export default {
       /* 背景色 */
       bgc = '#fff',
       /* 1级文字颜色 */
-      color1 = '#606266',
+      mainColor = '#606266',
       /* 2级文字颜色 */
-      color2 = '#909399',
-      /* 3级文字颜色 */
-      color3 = '#C0C4CC',
+      navSecondaryColor = '#707070',
       /* 导航栏专属1级字体 */
       navTextColor = '#606266',
       /*  导航栏专属2级字体*/
@@ -154,11 +152,10 @@ export default {
       if (isOpenDarkModel.value) {
         bgc = '#343a40'
         /* 1级文字颜色 */
-        color1 = '#fdfffc'
+        mainColor = '#fdfffc'
         /* 2级文字颜色 */
-        color2 = '#b7b7b7'
-        /* 3级文字颜色 */
-        color3 = '#C0C4CC'
+        navSecondaryColor = '#b7b7b7'
+
         /* 导航栏专属1级字体 */
         navTextColor = '#fdfffc'
         /*  导航栏专属2级字体*/
@@ -168,11 +165,10 @@ export default {
       } else {
         bgc = '#fff'
         /* 1级文字颜色 */
-        color1 = '#606266'
+        mainColor = '#606266'
         /* 2级文字颜色 */
-        color2 = '#909399'
-        /* 3级文字颜色 */
-        color3 = '#C0C4CC'
+        navSecondaryColor = '#909399'
+    
         navTextColor = '#606266'
         /*  导航栏专属2级字体*/
         navSecondaryTextColor = '#909399'
@@ -182,9 +178,9 @@ export default {
 
       //修改CSS中的全局变量
       document.documentElement.style.setProperty('--bgc', bgc)
-      document.documentElement.style.setProperty('--color1', color1)
-      document.documentElement.style.setProperty('--color2', color2)
-      document.documentElement.style.setProperty('--color3', color3)
+      document.documentElement.style.setProperty('--mainColor', mainColor)
+      document.documentElement.style.setProperty('--navSecondaryColor', navSecondaryColor)
+
       document.documentElement.style.setProperty('--navBgc', navBgc)
       if (isShowBgc.value) {
         document.documentElement.style.setProperty(
@@ -213,13 +209,13 @@ export default {
 <style lang="less" scoped>
 .navBoxBgc {
   background-color: var(--navBgc);
-  z-index: 999;
 }
 .navBox {
   width: 100%;
   padding: 0 1.25rem;
   transition: all 0.2s;
   position: fixed;
+  z-index: 999;
   .navList {
     position: absolute;
     // background-color: #fff;
@@ -238,7 +234,7 @@ export default {
       cursor: pointer;
       transition: all 0.2s;
       font-weight: 700;
-      color: var(--color1);
+      color: var(--mainColor);
     }
     li:hover {
       color: var(--activeLink);
