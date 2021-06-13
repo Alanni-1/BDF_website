@@ -7,52 +7,92 @@
       <!-- 轮播图 -->
       <el-carousel height="100vh" trigger="click" loop arrow="never">
         <el-carousel-item>
-          <div class="wu1"></div>
+          <el-image
+            fit="cover"
+            style="height:100%"
+            :src="require('@/assets/image/ShufflingFigure1.jpg')"
+          ></el-image>
         </el-carousel-item>
         <el-carousel-item>
-          <div class="wu2"></div>
+          <el-image
+            fit="cover"
+            style="height:100%"
+            :src="require('@/assets/image/ShufflingFigure2.jpg')"
+          ></el-image>
         </el-carousel-item>
         <el-carousel-item>
-          <div class="wu3"></div>
+          <el-image
+            fit="cover"
+            style="height:100%"
+            :src="require('@/assets/image/ShufflingFigure3.jpg')"
+          ></el-image>
         </el-carousel-item>
         <el-carousel-item>
-          <div class="wu2"></div>
+          <el-image
+            style="height:100%"
+            fit="cover"
+            :src="require('@/assets/image/ShufflingFigure4.jpg')"
+          ></el-image>
         </el-carousel-item>
       </el-carousel>
+      <!-- 遮罩层 -->
+      <div class="msk"></div>
     </div>
     <div class="main">
-      <Features />
       <Celebrations />
       <HotActivity />
+      <Features />
       <P1 />
       <P2 />
       <Figure />
       <!-- 轮播图 -->
-      <el-carousel
-        type="card"
-        height="300px"
-        trigger="click"
-        loop
-        arrow="never"
-      >
-        <el-carousel-item>
-          <div class="wu1"></div>
-        </el-carousel-item>
-        <el-carousel-item>
-          <div class="wu2"></div>
-        </el-carousel-item>
-        <el-carousel-item>
-          <div class="wu3"></div>
-        </el-carousel-item>
-        <el-carousel-item>
-          <div class="wu2"></div>
-        </el-carousel-item>
-      </el-carousel>
+      <div>
+        <el-carousel
+          direction="vertical"
+          height="400px"
+          trigger="click"
+          loop
+          arrow="never"
+        >
+          <el-carousel-item>
+            <el-image
+              fit="cover"
+              style="height:100%"
+              :src="require('@/assets/image/ShufflingFigure1.jpg')"
+            ></el-image>
+          </el-carousel-item>
+          <el-carousel-item>
+            <el-image
+              fit="cover"
+              style="height:100%"
+              :src="require('@/assets/image/ShufflingFigure2.jpg')"
+            ></el-image>
+          </el-carousel-item>
+          <el-carousel-item>
+            <el-image
+              fit="cover"
+              style="height:100%"
+              :src="require('@/assets/image/ShufflingFigure2.jpg')"
+            ></el-image>
+          </el-carousel-item>
+          <el-carousel-item>
+            <el-image
+              fit="cover"
+              style="height:100%"
+              :src="require('@/assets/image/ShufflingFigure3.jpg')"
+            ></el-image>
+          </el-carousel-item>
+        </el-carousel>
+      </div>
     </div>
     <AboutFeasts />
     <Copyright />
     <BackToTop />
   </div>
+
+  <!-- 回到顶部 -->
+  <!-- <el-backtop target=".page-component__scroll .el-scrollbar__wrap">
+  </el-backtop> -->
 </template>
 
 <script>
@@ -97,16 +137,14 @@ export default {
   height: 100vh;
   background-color: #777;
 }
-.wu2 {
+.msk {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100vh;
-
-  background-color: #888;
-}
-.wu3 {
-  width: 100%;
-  height: 100vh;
-
-  background-color: #999;
+  z-index: 2;
+  background-color: #000;
+  opacity: 0.2;
 }
 </style>

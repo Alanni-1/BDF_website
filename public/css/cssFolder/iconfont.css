@@ -1,7 +1,8 @@
 @font-face {
-  font-family: 'iconfont'; /* Project id 2606303 */
-  src: url('//at.alicdn.com/t/font_2606303_80rnwncj5es.woff2?t=1623557401921') format('woff2'), url('//at.alicdn.com/t/font_2606303_80rnwncj5es.woff?t=1623557401921') format('woff'),
-    url('//at.alicdn.com/t/font_2606303_80rnwncj5es.ttf?t=1623557401921') format('truetype');
+  font-family: "iconfont"; /* Project id 2606303 */
+  src: url('//at.alicdn.com/t/font_2606303_3deulc1njga.woff2?t=1623562158295') format('woff2'),
+       url('//at.alicdn.com/t/font_2606303_3deulc1njga.woff?t=1623562158295') format('woff'),
+       url('//at.alicdn.com/t/font_2606303_3deulc1njga.ttf?t=1623562158295') format('truetype');
 }
 
 .iconfont {
@@ -12,12 +13,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-I:before {
+  content: "\e60d";
+}
+
 .icon-mail:before {
-  content: '\e6ff';
+  content: "\e6ff";
 }
 
 .icon-fanhuidingbu:before {
-  content: '\e6e6';
+  content: "\e6e6";
 }
 
 .icon-taiyang:before {

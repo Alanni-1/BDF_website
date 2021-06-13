@@ -6,6 +6,7 @@ import store from './store'
 // 导入入口css
 import '../public/css/main.css'
 import 'element-plus/lib/theme-chalk/base.css'
+
 // element-plus
 import {
   ElButton,
@@ -25,13 +26,15 @@ import {
   ElDropdownMenu,
   ElCollapseTransition,
   ElCarousel,
-  ElCarouselItem
+  ElCarouselItem,
+  ElBacktop
 } from 'element-plus'
 
 let app = createApp(App)
 app.component(ElCollapseTransition.name, ElCollapseTransition)
 app
   .use(ElButton)
+  .use(ElBacktop)
   .use(ElSelect)
   .use(ElContainer)
   .use(ElHeader)

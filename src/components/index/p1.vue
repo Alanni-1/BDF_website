@@ -1,6 +1,6 @@
 <template>
   <BaseLayout>
-    <template #title>O u r N e w s & E v e n t s</template>
+    <template #title>端午新闻</template>
     <template #content>
       <div class="warp">
         <el-row :gutter="30">
@@ -28,7 +28,6 @@
           </el-col>
         </el-row>
       </div>
-       
     </template>
   </BaseLayout>
 </template>
@@ -44,29 +43,29 @@ export default {
   setup() {
     const lists = [
       {
-        img: 'https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png',
-        tags: ['Parties'],
-        title: 'Sunt in culpa qui officia dese runt mollit anim',
+        img: require('@/assets/image/news1.jpg'),
+        tags: ['美食', '面条'],
+        title: '不止有粽子 端午还有这些必上美食 ',
         author: {
-          name: 'Isabella ava',
+          name: '新华社快报',
           time: 'Jan 28 2021'
         }
       },
       {
-        img: 'https://cube.elemecdn.com/6/94/4d3ea53c084bad6931a56d5158a48jpeg.jpeg',
-        tags: ['Celebrations'],
-        title: 'Eaque ipsa quae ab illo remos dez inve ntore',
+        img: require('@/assets/image/news2.jpg'),
+        tags: ['习俗', '节日', '端午节'],
+        title: '民俗迎端午：柳江区进德镇泗浪村红花屯',
         author: {
-          name: 'Charlotte mia',
+          name: '百度新闻',
           time: 'Jan 13, 2021'
         }
       },
       {
-        img: 'https://fuss10.elemecdn.com/3/28/bbf893f792f03a54408b3b7a7ebf0jpeg.jpeg',
-        tags: ['New Year'],
-        title: 'Quasi archi tecto bea dicta sunt expl icab',
+        img: require('@/assets/image/news3.jpg'),
+        tags: ['统计', '人们'],
+        title: '端午假期全国共接待国内游客4880.9万人次',
         author: {
-          name: 'Charlotte mia',
+          name: "中国日报",
           time: 'Jan 06 2021'
         }
       }
@@ -84,7 +83,7 @@ div.warp {
   padding: 0 2rem;
   .item {
     margin-bottom: 2rem;
-
+    cursor: pointer;
     border-radius: 15px;
 
     .item-img {

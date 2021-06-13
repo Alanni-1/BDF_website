@@ -5,7 +5,10 @@
       <el-col :lg="11" :md="10" :sm="13" :xs="18">
         <!-- 左边布局 -->
         <div class="navLeft">
-          <div class="logo"></div>
+          <div class="logo">
+            <el-image :src="require('@/assets/image/端午logo.png')" fil="cover">
+            </el-image>
+          </div>
           <h1 class="text">浓情端午，放粽一下!</h1>
         </div>
       </el-col>
@@ -168,7 +171,7 @@ export default {
         mainColor = '#606266'
         /* 2级文字颜色 */
         navSecondaryColor = '#909399'
-    
+
         navTextColor = '#606266'
         /*  导航栏专属2级字体*/
         navSecondaryTextColor = '#909399'
@@ -179,7 +182,10 @@ export default {
       //修改CSS中的全局变量
       document.documentElement.style.setProperty('--bgc', bgc)
       document.documentElement.style.setProperty('--mainColor', mainColor)
-      document.documentElement.style.setProperty('--navSecondaryColor', navSecondaryColor)
+      document.documentElement.style.setProperty(
+        '--navSecondaryColor',
+        navSecondaryColor
+      )
 
       document.documentElement.style.setProperty('--navBgc', navBgc)
       if (isShowBgc.value) {
@@ -209,6 +215,7 @@ export default {
 <style lang="less" scoped>
 .navBoxBgc {
   background-color: var(--navBgc);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
 }
 .navBox {
   width: 100%;
@@ -246,11 +253,9 @@ export default {
     justify-content: flex-start;
     align-items: center;
     div.logo {
-      width: 6.25rem;
+      width: 6rem;
       height: 100%;
-      background-image: url('../../assets/image/端午logo.png');
-      background-size: cover;
-      margin-right: 1.25rem;
+      padding: .5rem 1rem;
     }
     h1 {
       color: var(--navTextColor);

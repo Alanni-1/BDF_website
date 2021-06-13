@@ -33,6 +33,7 @@
 <script lang="ts">
 export default {
   name: 'figureItem',
+
   setup() {
     return {}
   }

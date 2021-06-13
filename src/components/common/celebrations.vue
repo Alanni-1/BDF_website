@@ -6,34 +6,21 @@
         <el-row :gutter="20">
           <el-col :md="12">
             <div class="clebrationDetail">
-              <h2>AmazingCelebrations</h2>
+              <h2>端午节</h2>
               <p>
-                Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
-                ultrices in ligula. Semper at tempufddfel. Lorem ipsum dolor sit
-                amet consectetur adipisicing elit. Non quae, fugiat consequatur
-                voluptatem nihil ad. Lorem ipsum dolor sit amet
+                农历五月初五，俗称“端午节”是中国民间的传统节日。。初五可以称为端五。从史籍上看，“端午”二字最早见于晋人周处《风土记》：“仲夏端午，烹鹜角黍”。端午节是我国汉族人民的传统节日。这一天必不可少的活动逐渐演变为：吃粽子，赛龙舟，挂菖蒲、艾叶，薰苍术、白芷，喝雄黄酒。吃粽子和赛龙舟，是为了纪念屈原，所以解放后曾把端午节定名为“诗人节”，以纪念屈原。至于挂菖蒲、艾叶，薰苍术、白芷，喝雄黄酒，则据说是为了压邪。过端午节，是中国人二千多年来的传统习惯，由于地域广大，民族众多，加上许多故事传说，于是不仅产生了众多相异的节名，各地也有着不尽相同的习俗。端午节从2008年起为国家法定节假日。
               </p>
             </div>
           </el-col>
-          <el-col :md="12">
-            <el-row :gutter="10">
-              <el-col :sm="12">
-                <div class="clebrationImg">
-                  <img
-                    src="https://w.wallhaven.cc/full/l3/wallhaven-l3zmwy.jpg"
-                    alt=""
-                  />
-                </div>
-              </el-col>
-              <el-col :sm="12">
-                <div class="clebrationImg">
-                  <img
-                    src="https://w.wallhaven.cc/full/l3/wallhaven-l3zmwy.jpg"
-                    alt=""
-                  />
-                </div>
-              </el-col>
-            </el-row>
+          <el-col :md="12" class="flexCenter">
+            <div class="clebrationImg">
+              <el-image
+                fit="cover"
+                style="height:100%"
+                src="http://n1-q.mafengwo.net/s6/M00/F4/14/wKgB4lOFtLuAHh8hAAETZ6Sh1SA65.jpeg?imageView2%2F2%2Fw%2F2000%2Fh%2F600%2Fq%2F90"
+              >
+              </el-image>
+            </div>
           </el-col>
         </el-row>
       </div>
@@ -52,15 +39,18 @@ export default {
 
 <style lang="less" scoped>
 div.clebration {
-   border-top: 1px solid #e6e6e6;
+  border-top: 1px solid #e6e6e6;
   padding: 48px 0;
   background-color: var(--bgc);
   .clebrationBox {
     padding: 48px 0;
     .clebrationContainer {
-      max-width: 1200px;
+      max-width: 1400px;
       padding: 0 30px;
       margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       div.clebrationDetail {
         h2 {
           font-size: 2.8125rem;
@@ -69,6 +59,7 @@ div.clebration {
         }
 
         p {
+          text-indent: 2em;
           font-size: 17px;
           color: var(--navSecondaryColor);
           line-height: 28px;
@@ -77,16 +68,15 @@ div.clebration {
       }
       .clebrationImg {
         width: 100%;
-        height: 185px;
-        margin-bottom: 16px;
+        height: 80%;
         overflow: hidden;
         cursor: pointer;
-        img {
-          transition: all .4s ease-in-out;
+        .el-image {
+          transition: all 0.4s ease-in-out;
         }
       }
-      .clebrationImg:hover img {
-      transform: scale(1.2);
+      .clebrationImg:hover .el-image {
+        transform: scale(1.2);
       }
     }
   }

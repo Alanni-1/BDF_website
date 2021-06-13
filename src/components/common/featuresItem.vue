@@ -8,13 +8,13 @@
     <div class="feature-info">
       <a href="#">
         <h3 class="feature-titel flexCenter">
-          Perfect Venues
+          {{ featuresObj.title }}
         </h3>
       </a>
       <p class="feature-text">
-        Lorem ipsum dolor sit amet consectetur adipis
+        {{ featuresObj.text }}
       </p>
-      <a href="#" class="feature-moreText flexCenter">Our Venues</a>
+      <a href="#" class="feature-moreText flexCenter">了解详情</a>
     </div>
   </div>
 </template>
@@ -22,8 +22,17 @@
 <script lang="ts">
 export default {
   name: 'featuresItem',
-  setup() {
-    return {}
+  props: {
+    title: String,
+    text: String
+  },
+  setup(props: any) {
+    let featuresObj = {
+      title: props.title,
+      text: props.text,
+
+    }
+    return {featuresObj}
   }
 }
 </script>

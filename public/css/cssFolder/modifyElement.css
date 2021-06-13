@@ -9,3 +9,6 @@
   width: 10px !important;
   height: 10px !important;
 }
+.el-carousel__indicators {
+  z-index: 3;
+}
