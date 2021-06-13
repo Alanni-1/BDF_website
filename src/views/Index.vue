@@ -51,6 +51,7 @@
     </div>
     <AboutFeasts />
     <Copyright />
+    <BackToTop />
   </div>
 </template>
 
@@ -71,6 +72,8 @@ import P2 from '@/components/index/p2'
 
 import HotActivity from '@/components/index/hotActivity'
 
+import BackToTop from '@/components/common/backToTop'
+
 export default {
   name: 'index',
   components: {
@@ -82,7 +85,8 @@ export default {
     Copyright,
     P1,
     P2,
-    HotActivity
+    HotActivity,
+    BackToTop
   }
 }
 </script>
