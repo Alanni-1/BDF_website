@@ -6,7 +6,9 @@
         <el-row :gutter="30">
           <el-col :md="8" :sm="12" :xs="24" v-for="item of lists" :key="item">
             <el-card class="item" :body-style="{ padding: '0' }" shadow="hover">
-              <img class="item-img" :src="item.img" />
+              <div class="item-img">
+                <img :src="item.img" />
+              </div>
               <div class="item-body">
                 <el-tag class="item-tag" v-for="tag of item.tags" :key="tag">{{
                   tag
@@ -89,7 +91,16 @@ div.warp {
       display: block;
       width: 100%;
       height: 20rem;
-      object-fit: cover;
+
+      overflow: hidden;
+
+      &:hover img {
+        transform: scale(1.2);
+      }
+      img {
+        object-fit: cover;
+        transition: all 0.4s ease-in-out;
+      }
     }
 
     .item-body {
