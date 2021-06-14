@@ -20,7 +20,7 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/people/:name',
-    name: 'people',
+    name: 'People',
     component: HistoryPeople
   }
 ]
