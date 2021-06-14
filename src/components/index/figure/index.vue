@@ -78,7 +78,7 @@ export default {
     font-size: 2.8125rem;
     height: 3.75rem;
     letter-spacing: .5rem;
-    
+
   }
   .figureContainer {
     padding: 3rem 0.9375rem;

@@ -1,17 +1,18 @@
 <template>
-  <!-- 端午习俗 -->
-  <div class="hot-activity-warp">
-    <div class="hot-activity">
+  <div class="parallax-warp" :style="{ backgroundImage: `url(${img})` }">
+    <div class="parallax">
       <div class="info-warp">
-        <h1 class="title">端午风俗知多少</h1>
+        <!-- 标题 -->
+        <h1 class="title">{{ title }}</h1>
         <p class="content">
           <!-- 打字特效 -->
           {{ TyperObj.output }}
           <span class="easy-typed-cursor">|</span>
         </p>
-        <el-button class="learn-more" type="primary" round>
-          了解更多
-        </el-button>
+        <!-- 自定义 -->
+        <div class="other">
+          <slot name="other"></slot>
+        </div>
       </div>
     </div>
   </div>
@@ -23,8 +24,24 @@ import EasyTyper from 'easy-typer-js'
 import { reactive } from 'vue'
 
 export default {
-  name: 'hotActivity',
-  setup() {
+  name: 'parallax',
+  props: {
+    // 标题
+    title: {
+      type: String,
+      required: true
+    },
+    // 描述
+    description: {
+      type: String,
+      required: true
+    },
+    img: {
+      type: String,
+      required: true
+    }
+  },
+  setup(props: any) {
     let TyperObj = reactive({
       output: '',
       isEnd: false,
@@ -35,26 +52,25 @@ export default {
       backSpeed: 50,
       sentencePause: false
     })
-    const type = new EasyTyper(
+    new EasyTyper(
       TyperObj,
       [],
       (instance: any) => {
         // 回调函数 如果这里使用了递归调用会一直循环打印，需要在外部触发停止
         // 此回调用于获取新的数据然后重新输出
-        instance.input = [
-          '我国民间过端午节是较为隆重的，庆祝的活动也是各种各样。你知道的端午节习俗有哪些？一起了解一下吧。'
-        ]
+        instance.input = [props.description]
         instance.play()
       },
-      function() {}
+      function () {}
     )
+
     return { TyperObj }
   }
 }
 </script>
 
 <style lang="less" scoped>
-.hot-activity-warp {
+.parallax-warp {
   @height: 30rem;
 
   position: relative;
@@ -64,7 +80,7 @@ export default {
 
   z-index: 1;
 
-  background: url("http://demo.vhostgo.com/3165/advs/pics/20130410/1365577295.jpg") no-repeat;
+  background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 
@@ -80,7 +96,7 @@ export default {
     background: rgba(0, 0, 0, 0.4);
   }
 
-  .hot-activity {
+  .parallax {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,18 +126,6 @@ export default {
         margin: 1rem;
 
         font-size: 20px;
-      }
-
-      .learn-more {
-        margin: 3rem 0;
-
-        background: #fd614a;
-        border: none;
-        transition: all 0.2s;
-        &:hover {
-          background-color: var(--activeLink);
-          color: #000000;
-        }
       }
     }
   }

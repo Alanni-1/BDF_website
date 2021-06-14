@@ -7,7 +7,7 @@
     </div>
     <div class="main">
       <!-- 习俗 -->
-      <HotActivity/>
+      <CustomEntrance />
     </div>
     <div class="footer">
       <AboutFeasts />
@@ -30,7 +30,8 @@ import AboutFeasts from '@/components/common/aboutFeasts.vue'
 import Copyright from '@/components/common/copyright.vue'
 // 返回顶部
 import BackToTop from '@/components/common/backToTop.vue'
-import HotActivity from '@/components/index/hotActivity.vue'
+
+import CustomEntrance from '@/components/index/customEntrance.vue'
 export default {
   name: 'Custom',
   setup() {
@@ -41,7 +42,7 @@ export default {
     AboutFeasts,
     Copyright,
     BackToTop,
-    HotActivity
+    CustomEntrance
   }
 }
 </script>

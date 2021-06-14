@@ -40,10 +40,11 @@
     </div>
     <div class="main">
       <Celebrations />
-      <HotActivity />
+      <CustomEntrance />
       <Features />
       <!-- 新闻 -->
-      <P1 />
+      <News />
+
       <!-- 历史人物介绍 -->
       <Figure />
       <P2 />
@@ -66,19 +67,22 @@ import NavigationBar from '@/components/common/navigationBar'
 // 关于
 import AboutFeasts from '@/components/common/aboutFeasts'
 // 特性分类组件
-import Features from '@/components/common/features.vue'
+import Features from '@/components/index/features'
 // 庆祝活动组件
-import Celebrations from '@/components/common/celebrations.vue'
+import Celebrations from '@/components/index/celebrations.vue'
 // 庆祝活动组件
-import Figure from '@/components/common/figure.vue'
+import Figure from '@/components/index/figure'
 // 版权组件
 import Copyright from '@/components/common/copyright'
-import P1 from '@/components/index/p1'
+// 新闻组件
+import News from '@/components/index/news'
+
 import P2 from '@/components/index/p2'
-// 视差组件
-import HotActivity from '@/components/index/hotActivity'
-// 返回顶部
-import BackToTop from '@/components/common/backToTop'
+
+// 习俗入口组件
+import CustomEntrance from '@/components/index/customEntrance'
+// 返回顶部组件
+import BackToTop from '@/components/common/backToTop.vue'
 
 export default {
   name: 'index',
@@ -89,9 +93,9 @@ export default {
     Celebrations,
     Figure,
     Copyright,
-    P1,
+    News,
     P2,
-    HotActivity,
+    CustomEntrance,
     BackToTop
   }
 }

@@ -37,6 +37,7 @@
 <script>
 import BaseLayout from '@/components/common/baseLayout'
 import Title from '@/components/common/title.vue'
+
 export default {
   name: 'p1',
   components: {

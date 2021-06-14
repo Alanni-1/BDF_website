@@ -25,13 +25,15 @@ export default {
   props: {
     title: String,
     text: String,
-    img: null
+    img: null,
+    link: String
   },
   setup(props: any) {
     let featuresObj = {
       title: props.title,
       text: props.text,
-      img: props.img
+      img: props.img,
+      link: props.link
     }
     console.log(featuresObj)
 
