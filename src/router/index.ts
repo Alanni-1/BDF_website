@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import Index from '../views/Index.vue'
 import Custom from '../views/Custom.vue'
-import historyPeople from '@/views/historyPeople.vue'
+import HistoryPeople from '@/views/HistoryPeople.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -21,7 +21,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/people/:name',
     name: 'people',
-    component: historyPeople
+    component: HistoryPeople
   }
 ]
 
