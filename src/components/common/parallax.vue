@@ -41,7 +41,7 @@ export default {
       required: true
     }
   },
-  setup(props: any) {
+  setup({ description }: any) {
     let TyperObj = reactive({
       output: '',
       isEnd: false,
@@ -52,13 +52,20 @@ export default {
       backSpeed: 50,
       sentencePause: false
     })
+
+    // 分割字符串
+    if (description.length >= 40) {
+      description = description.slice(0, 40)
+      description += '...'
+    }
+
     new EasyTyper(
       TyperObj,
       [],
       (instance: any) => {
         // 回调函数 如果这里使用了递归调用会一直循环打印，需要在外部触发停止
         // 此回调用于获取新的数据然后重新输出
-        instance.input = [props.description]
+        instance.input = [description]
         instance.play()
       },
       function () {}
