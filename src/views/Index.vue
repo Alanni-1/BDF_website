@@ -17,7 +17,7 @@
           <el-image
             fit="cover"
             style="height:100%"
-            :src="require('@/assets/image/ShufflingFigure2.jpg')"
+            :src="require('@/assets/image/ShufflingFigure5.jpg')"
           ></el-image>
         </el-carousel-item>
         <el-carousel-item>
@@ -44,60 +44,18 @@
       <Features />
       <!-- 新闻 -->
       <P1 />
-
       <!-- 历史人物介绍 -->
       <Figure />
       <P2 />
-      <!-- 轮播图 -->
-      <div>
-        <el-carousel
-          direction="vertical"
-          height="400px"
-          trigger="click"
-          loop
-          arrow="never"
-        >
-          <el-carousel-item>
-            <el-image
-              fit="cover"
-              style="height:100%"
-              :src="require('@/assets/image/ShufflingFigure1.jpg')"
-            ></el-image>
-          </el-carousel-item>
-          <el-carousel-item>
-            <el-image
-              fit="cover"
-              style="height:100%"
-              :src="require('@/assets/image/ShufflingFigure2.jpg')"
-            ></el-image>
-          </el-carousel-item>
-          <el-carousel-item>
-            <el-image
-              fit="cover"
-              style="height:100%"
-              :src="require('@/assets/image/ShufflingFigure2.jpg')"
-            ></el-image>
-          </el-carousel-item>
-          <el-carousel-item>
-            <el-image
-              fit="cover"
-              style="height:100%"
-              :src="require('@/assets/image/ShufflingFigure3.jpg')"
-            ></el-image>
-          </el-carousel-item>
-        </el-carousel>
-      </div>
     </div>
-    <AboutFeasts />
-    <!-- 版权 -->
-    <Copyright />
-    <!-- 返回顶部 -->
-    <BackToTop />
+    <div class="footer">
+      <AboutFeasts />
+      <!-- 版权 -->
+      <Copyright />
+      <!-- 返回顶部 -->
+      <BackToTop />
+    </div>
   </div>
-
-  <!-- 回到顶部 -->
-  <!-- <el-backtop target=".page-component__scroll .el-scrollbar__wrap">
-  </el-backtop> -->
 </template>
 
 <script>
@@ -113,12 +71,13 @@ import Features from '@/components/common/features.vue'
 import Celebrations from '@/components/common/celebrations.vue'
 // 庆祝活动组件
 import Figure from '@/components/common/figure.vue'
+// 版权组件
 import Copyright from '@/components/common/copyright'
 import P1 from '@/components/index/p1'
 import P2 from '@/components/index/p2'
-
+// 视差组件
 import HotActivity from '@/components/index/hotActivity'
-
+// 返回顶部
 import BackToTop from '@/components/common/backToTop'
 
 export default {

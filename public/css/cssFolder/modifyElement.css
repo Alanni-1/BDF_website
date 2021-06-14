@@ -9,6 +9,12 @@
   width: 10px !important;
   height: 10px !important;
 }
+
 .el-carousel__indicators {
   z-index: 3;
+}
+
+/* 分割线 */
+.el-divider__text {
+  background-color: var(--bgc) !important;
 }

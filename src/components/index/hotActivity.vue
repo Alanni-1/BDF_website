@@ -3,7 +3,7 @@
   <div class="hot-activity-warp">
     <div class="hot-activity">
       <div class="info-warp">
-        <h1 class="title">了解更多端午习俗！</h1>
+        <h1 class="title">端午风俗知多少</h1>
         <p class="content">
           <!-- 打字特效 -->
           {{ TyperObj.output }}
@@ -64,7 +64,7 @@ export default {
 
   z-index: 1;
 
-  background: url('~@/assets/image/banner1.jpg') no-repeat;
+  background: url("http://demo.vhostgo.com/3165/advs/pics/20130410/1365577295.jpg") no-repeat;
   background-size: cover;
   background-attachment: fixed;
 

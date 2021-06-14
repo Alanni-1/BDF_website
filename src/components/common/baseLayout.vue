@@ -18,7 +18,7 @@ export default {
 <style lang='less' scoped>
 .base-layout {
   padding: 3rem 3rem 0 3rem;
-
+  background-color: var(--bgc);
   h1.baseLayout-title {
     padding: 2.8125rem;
 

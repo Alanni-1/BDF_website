@@ -1,6 +1,8 @@
 <template>
   <BaseLayout>
-    <template #title>端午新闻</template>
+    <template #title>
+      <Title>粽要新闻</Title>
+    </template>
     <template #content>
       <div class="warp">
         <el-row :gutter="30">
@@ -34,11 +36,12 @@
 
 <script>
 import BaseLayout from '@/components/common/baseLayout'
-
+import Title from '@/components/common/title.vue'
 export default {
   name: 'p1',
   components: {
-    BaseLayout
+    BaseLayout,
+    Title
   },
   setup() {
     const lists = [

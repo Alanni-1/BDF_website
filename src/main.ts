@@ -27,12 +27,14 @@ import {
   ElCollapseTransition,
   ElCarousel,
   ElCarouselItem,
-  ElBacktop
+  ElBacktop,
+  ElDivider
 } from 'element-plus'
 
 let app = createApp(App)
 app.component(ElCollapseTransition.name, ElCollapseTransition)
 app
+  .use(ElDivider)
   .use(ElButton)
   .use(ElBacktop)
   .use(ElSelect)

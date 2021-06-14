@@ -1,9 +1,9 @@
 <template>
-  <div class="title flexCenter">
+  <el-divider>
     <h1>
       <slot></slot>
     </h1>
-  </div>
+  </el-divider>
 </template>
 
 <script lang="ts">
@@ -16,11 +16,14 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.title {
-  height: 3.75rem;
-  background-color: pink;
+.el-divider {
+  margin-bottom: 8.875rem;
   h1 {
-    text-align: center;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: var(--mainColor);
+    font-family: cursive !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
   }
 }
 </style>

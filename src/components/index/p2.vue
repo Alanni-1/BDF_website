@@ -1,6 +1,8 @@
 <template>
   <BaseLayout>
-    <template #title>We Provide Best Services</template>
+    <template #title>
+       <Title>粽情粽意</Title>
+    </template>
     <template #content>
       <div class="warp">
         <el-row>
@@ -43,11 +45,12 @@
 
 <script>
 import BaseLayout from '@/components/common/baseLayout'
-
+import Title from '@/components/common/title.vue'
 export default {
   name: 'p2',
   components: {
-    BaseLayout
+    BaseLayout,
+    Title
   }
 }
 </script>
