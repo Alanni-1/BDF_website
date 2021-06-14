@@ -1,7 +1,7 @@
 <template>
   <BaseLayout>
     <template #title>
-       <Title>粽情粽意</Title>
+       <defaultTitle>粽情粽意</defaultTitle>
     </template>
     <template #content>
       <div class="warp">
@@ -45,12 +45,12 @@
 
 <script>
 import BaseLayout from '@/components/common/baseLayout'
-import Title from '@/components/common/title.vue'
+import defaultTitle from '@/components/common/defaultTitle.vue'
 export default {
   name: 'p2',
   components: {
     BaseLayout,
-    Title
+    defaultTitle
   }
 }
 </script>

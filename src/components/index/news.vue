@@ -1,7 +1,7 @@
 <template>
   <BaseLayout>
     <template #title>
-      <Title>粽要新闻</Title>
+      <defaultTitle>粽要新闻</defaultTitle>
     </template>
     <template #content>
       <div class="warp">
@@ -36,13 +36,13 @@
 
 <script>
 import BaseLayout from '@/components/common/baseLayout'
-import Title from '@/components/common/title.vue'
+import defaultTitle from '@/components/common/defaultTitle.vue'
 
 export default {
   name: 'p1',
   components: {
     BaseLayout,
-    Title
+    defaultTitle
   },
   setup() {
     const lists = [

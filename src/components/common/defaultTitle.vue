@@ -8,7 +8,7 @@
 
 <script lang="ts">
 export default {
-  name: 'title',
+  name: 'defaultTitle',
   setup() {
     return {}
   }
@@ -17,7 +17,7 @@ export default {
 
 <style lang="less" scoped>
 .el-divider {
-  margin-bottom: 8.875rem;
+  margin-bottom: 6.875rem;
   h1 {
     font-weight: 700;
     font-size: 2.5rem;

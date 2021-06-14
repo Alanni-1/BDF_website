@@ -2,7 +2,7 @@
   <!-- 历史源于组件 -->
   <div class="features">
     <div class="featuresContainer">
-      <Title>端午的由来</Title>
+      <defaultTitle>端午的由来</defaultTitle>
       <el-row :gutter="20">
         <el-col :md="6" :sm="12" v-for="item in FeaturesArray" :key="item">
           <FeaturesItem
@@ -20,7 +20,7 @@
 <script lang="ts">
 import FeaturesItem from './featuresItem.vue'
 // 导入标题组件
-import Title from '@/components/common/title.vue'
+import defaultTitle from '@/components/common/defaultTitle.vue'
 export default {
   name: 'features',
   setup() {
@@ -33,13 +33,15 @@ export default {
       },
       {
         title: '源于纪念伍子胥',
-        text: '端午节的第二个传说，在江浙一带流传很广，是纪念春秋时期的伍子胥...',
+        text:
+          '端午节的第二个传说，在江浙一带流传很广，是纪念春秋时期的伍子胥...',
         img: require('@/assets/image/featuresAtavar2.jpg'),
         link: '/people/屈原'
       },
       {
         title: '源于纪念孝女曹娥',
-        text: '端午节的第三个传说，是为纪念东汉(公元23--220年)孝女曹娥救父投江...',
+        text:
+          '端午节的第三个传说，是为纪念东汉(公元23--220年)孝女曹娥救父投江...',
         img: require('@/assets/image/featuresAtavar3.jpg'),
         link: '/people/曹娥'
       },
@@ -54,7 +56,7 @@ export default {
   },
   components: {
     FeaturesItem,
-    Title
+    defaultTitle
   }
 }
 </script>
