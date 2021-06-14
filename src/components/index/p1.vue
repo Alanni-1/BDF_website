@@ -16,7 +16,7 @@
                 <p>{{ item.title }}</p>
 
                 <div class="item-author">
-                  <img class="author-img" src="~@/assets/image/5d.jpg" />
+                  <img class="author-img" :src="item.author.avatar" />
 
                   <div class="author-info">
                     <h3 class="name">{{ item.author.name }}</h3>
@@ -48,7 +48,8 @@ export default {
         title: '不止有粽子 端午还有这些必上美食 ',
         author: {
           name: '新华社快报',
-          time: 'Jan 28 2021'
+          time: '2021年6月10日',
+          avatar: require('@/assets/image/newsAvatar1.jpg')
         }
       },
       {
@@ -57,7 +58,8 @@ export default {
         title: '民俗迎端午：柳江区进德镇泗浪村红花屯',
         author: {
           name: '百度新闻',
-          time: 'Jan 13, 2021'
+          time: '2021年6月13日',
+          avatar: require('@/assets/image/newsAvatar2.jpg')
         }
       },
       {
@@ -65,8 +67,9 @@ export default {
         tags: ['统计', '人们'],
         title: '端午假期全国共接待国内游客4880.9万人次',
         author: {
-          name: "中国日报",
-          time: 'Jan 06 2021'
+          name: '中国日报',
+          time: '2021年6月14日',
+          avatar: require('@/assets/image/newsAvatar3.jpg')
         }
       }
     ]

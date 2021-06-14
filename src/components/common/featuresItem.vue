@@ -3,7 +3,7 @@
 
   <div class="feature-body">
     <div class="feature-images flexCenter">
-      <i class="iconfont icon-Shapecopy"></i>
+      <el-image :src="featuresObj.img" fit="cover"></el-image>
     </div>
     <div class="feature-info">
       <a href="#">
@@ -24,15 +24,18 @@ export default {
   name: 'featuresItem',
   props: {
     title: String,
-    text: String
+    text: String,
+    img: null
   },
   setup(props: any) {
     let featuresObj = {
       title: props.title,
       text: props.text,
-
+      img: props.img
     }
-    return {featuresObj}
+    console.log(featuresObj)
+
+    return { featuresObj }
   }
 }
 </script>
@@ -43,11 +46,22 @@ div.feature-body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 256px;
   div.feature-images {
-    i.iconfont.icon-Shapecopy {
-      font-size: 4.375rem;
-      color: #fd614a;
+    width: 8.125rem;
+    height: 8.125rem;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all 0.6s;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15), 0 0 6px rgba(0, 0, 0, 0.04);
+    cursor: pointer;
+    .el-image {
+      width: 100%;
+      height: 100%;
+    }
+    &:hover {
+      transform: rotate(360deg) scale(1.2);
+      // border: 5px solid #ffd700;
     }
   }
 
@@ -60,7 +74,7 @@ div.feature-body {
         transition: all 0.2s;
       }
       h3:hover {
-        color: #fd614a;
+        color: var(--activeLink);
       }
     }
 
@@ -73,7 +87,7 @@ div.feature-body {
     }
 
     a.feature-moreText {
-      color: #fd614a;
+      color: var(--activeLink);
       font-weight: 700;
       margin: 24px;
       font-size: 15px;

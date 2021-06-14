@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-
+// 导入弹幕插件
 // 导入入口css
 import '../public/css/main.css'
 import 'element-plus/lib/theme-chalk/base.css'

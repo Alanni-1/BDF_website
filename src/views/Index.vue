@@ -42,9 +42,12 @@
       <Celebrations />
       <HotActivity />
       <Features />
+      <!-- 新闻 -->
       <P1 />
-      <P2 />
+
+      <!-- 历史人物介绍 -->
       <Figure />
+      <P2 />
       <!-- 轮播图 -->
       <div>
         <el-carousel
@@ -86,7 +89,9 @@
       </div>
     </div>
     <AboutFeasts />
+    <!-- 版权 -->
     <Copyright />
+    <!-- 返回顶部 -->
     <BackToTop />
   </div>
 
@@ -97,8 +102,10 @@
 
 <script>
 import { ref, reactive } from 'vue'
+
 // 导航栏组件
 import NavigationBar from '@/components/common/navigationBar'
+// 关于
 import AboutFeasts from '@/components/common/aboutFeasts'
 // 特性分类组件
 import Features from '@/components/common/features.vue'

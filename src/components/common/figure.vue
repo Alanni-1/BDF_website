@@ -87,22 +87,4 @@ export default {
   }
 }
 
-.easy-typed-cursor {
-  opacity: 1;
-  -webkit-animation: blink 1s infinite;
-  -moz-animation: blink 1s infinite;
-  animation: blink 1s infinite;
-  vertical-align: top;
-}
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 </style>

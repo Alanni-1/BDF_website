@@ -1,21 +1,55 @@
 <template>
+  <!-- 端午习俗 -->
   <div class="hot-activity-warp">
     <div class="hot-activity">
       <div class="info-warp">
-        <h1 class="title">Celebrate With Us!</h1>
+        <h1 class="title">了解更多端午习俗！</h1>
         <p class="content">
-          Sed ut perspiciatis unde omnis iste natus error sit olupt atem
-          accusantium dolo remque lauda ntium, totam rem aperiam.
+          <!-- 打字特效 -->
+          {{ TyperObj.output }}
+          <span class="easy-typed-cursor">|</span>
         </p>
-        <el-button class="learn-more" type="primary" round> 更多 </el-button>  
+        <el-button class="learn-more" type="primary" round>
+          了解更多
+        </el-button>
       </div>
     </div>
   </div>
 </template>
 
-<script>
+<script lang="ts">
+// 导入打字机特效
+import EasyTyper from 'easy-typer-js'
+import { reactive } from 'vue'
+
 export default {
-  name: 'hotActivity'
+  name: 'hotActivity',
+  setup() {
+    let TyperObj = reactive({
+      output: '',
+      isEnd: false,
+      speed: 150,
+      singleBack: false,
+      sleep: 1000,
+      type: 'rollback',
+      backSpeed: 50,
+      sentencePause: false
+    })
+    const type = new EasyTyper(
+      TyperObj,
+      [],
+      (instance: any) => {
+        // 回调函数 如果这里使用了递归调用会一直循环打印，需要在外部触发停止
+        // 此回调用于获取新的数据然后重新输出
+        instance.input = [
+          '我国民间过端午节是较为隆重的，庆祝的活动也是各种各样。你知道的端午节习俗有哪些？一起了解一下吧。'
+        ]
+        instance.play()
+      },
+      function() {}
+    )
+    return { TyperObj }
+  }
 }
 </script>
 
@@ -83,7 +117,7 @@ export default {
 
         background: #fd614a;
         border: none;
-
+        transition: all 0.2s;
         &:hover {
           background-color: var(--activeLink);
           color: #000000;

@@ -38,12 +38,15 @@ a {
 }
 
 /* 打字特效 */
-.typed-cursor {
+
+.easy-typed-cursor {
   opacity: 1;
-  -webkit-animation: blink 0.7s infinite;
-  -moz-animation: blink 0.7s infinite;
-  animation: blink 0.7s infinite;
+  -webkit-animation: blink .7s infinite;
+  -moz-animation: blink .7s infinite;
+  animation: blink .7s infinite;
+  vertical-align: top;
 }
+
 
 @keyframes blink {
   0% {
