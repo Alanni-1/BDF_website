@@ -1,9 +1,6 @@
 <template>
   <div>
     <div class="header">
-      <!-- 导航栏 -->
-      <NavigationBar />
-
       <!-- 轮播图 -->
       <el-carousel height="100vh" trigger="click" loop arrow="never">
         <el-carousel-item>
@@ -44,17 +41,9 @@
       <Features />
       <!-- 新闻 -->
       <News />
-
       <!-- 历史人物介绍 -->
       <Figure />
       <P2 />
-    </div>
-    <div class="footer">
-      <AboutFeasts />
-      <!-- 版权 -->
-      <Copyright />
-      <!-- 返回顶部 -->
-      <BackToTop />
     </div>
   </div>
 </template>
@@ -62,18 +51,13 @@
 <script>
 import { ref, reactive } from 'vue'
 
-// 导航栏组件
-import NavigationBar from '@/components/common/navigationBar'
-// 关于
-import AboutFeasts from '@/components/common/aboutFeasts'
 // 特性分类组件
 import Features from '@/components/index/features'
 // 庆祝活动组件
 import Celebrations from '@/components/index/celebrations.vue'
 // 庆祝活动组件
 import Figure from '@/components/index/figure'
-// 版权组件
-import Copyright from '@/components/common/copyright'
+
 // 新闻组件
 import News from '@/components/index/news'
 
@@ -81,22 +65,16 @@ import P2 from '@/components/index/p2'
 
 // 习俗入口组件
 import CustomEntrance from '@/components/index/customEntrance'
-// 返回顶部组件
-import BackToTop from '@/components/common/backToTop.vue'
 
 export default {
   name: 'index',
   components: {
-    NavigationBar,
-    AboutFeasts,
     Features,
     Celebrations,
     Figure,
-    Copyright,
     News,
     P2,
-    CustomEntrance,
-    BackToTop
+    CustomEntrance
   }
 }
 </script>

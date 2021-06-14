@@ -1,37 +1,17 @@
 <template>
   <div>
-    <div class="header">
-      <!-- 导航栏 -->
-      <NavigationBar />
-    </div>
     <div class="main"></div>
-    <div class="footer">
-      <AboutFeasts />
-      <!-- 版权 -->
-      <Copyright />
-      <!-- 返回顶部 -->
-      <BackToTop />
-    </div>
+
   </div>
 </template>
 
 <script>
-// 导航栏组件
-import NavigationBar from '@/components/common/navigationBar'
-// 关于
-import AboutFeasts from '@/components/common/aboutFeasts'
-// 版权组件
-import Copyright from '@/components/common/copyright'
-// 返回顶部组件
-import BackToTop from '@/components/common/backToTop.vue'
+
 
 export default {
   name: 'historyPeople',
   components: {
-    NavigationBar,
-    AboutFeasts,
-    Copyright,
-    BackToTop
+
   }
 }
 </script>

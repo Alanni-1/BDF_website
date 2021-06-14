@@ -1,7 +1,38 @@
 <template>
+  <div class="header">
+    <!-- 导航栏 -->
+    <NavigationBar />
+  </div>
   <router-view />
+  <div class="footer">
+    <AboutFeasts />
+    <!-- 版权 -->
+    <Copyright />
+    <!-- 返回顶部 -->
+    <BackToTop />
+  </div>
 </template>
 
-<style lang="less">
-
-</style>
+<script lang="ts">
+// 导航栏组件
+import NavigationBar from '@/components/common/navigationBar.vue'
+// 关于
+import AboutFeasts from '@/components/common/aboutFeasts.vue'
+// 版权组件
+import Copyright from '@/components/common/copyright.vue'
+// 返回顶部
+import BackToTop from '@/components/common/backToTop.vue'
+export default {
+  name: 'app',
+  setup() {
+    return {}
+  },
+  components: {
+    NavigationBar,
+    AboutFeasts,
+    Copyright,
+    BackToTop
+  }
+}
+</script>
+<style lang="less"></style>
