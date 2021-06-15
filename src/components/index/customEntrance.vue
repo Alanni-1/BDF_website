@@ -1,6 +1,6 @@
 <template>
   <!-- 端午习俗 -->
-  <Parallax :title="title" :description="description" :img="img">
+  <Parallax :title="title" :description="description" :bg="img">
     <template #other>
       <el-button class="learn-more" type="primary" round> 了解更多 </el-button>
     </template>
@@ -22,7 +22,7 @@ export default {
       '我国民间过端午节是较为隆重的，庆祝的活动也是各种各样。你知道的端午节习俗有哪些？一起了解一下吧。'
     )
 
-    let img = ref('http://demo.vhostgo.com/3165/advs/pics/20130410/1365577295.jpg')
+    let img = require('@/assets/image/indexCustom1.jpg')
 
     return {
       title,
