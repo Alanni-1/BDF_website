@@ -43,7 +43,7 @@
       <News />
       <!-- 历史人物介绍 -->
       <HistoryCharacterEntrance />
-      <P2 />
+      <Answer />
     </div>
   </div>
 </template>
@@ -61,7 +61,7 @@ import HistoryCharacterEntrance from '@/components/index/historyCharacterEntranc
 // 新闻组件
 import News from '@/components/index/news'
 
-import P2 from '@/components/index/p2'
+import Answer from '@/components/index/answer'
 
 // 习俗入口组件
 import CustomEntrance from '@/components/index/customEntrance'
@@ -73,7 +73,7 @@ export default {
     Celebrations,
     HistoryCharacterEntrance,
     News,
-    P2,
+    Answer,
     CustomEntrance
   }
 }
