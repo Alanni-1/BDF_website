@@ -56,6 +56,17 @@ export default {
     // 分割字符串
     if (description.length >= 40) {
       description = description.slice(0, 40)
+
+      // 字符串末尾
+      let lastStr = description.slice(
+        description.length - 1,
+        description.length
+      )
+      // 判断末尾
+      if (lastStr == '？' || lastStr == '。' || lastStr == '！') {
+        return
+      }
+      // 添加省略号Î
       description += '...'
     }
 
