@@ -82,6 +82,7 @@ div.feature-body {
     p.feature-text {
       color: var(--navSecondaryColor);
       margin: 15px;
+      height: 5rem;
       line-height: 28px;
       text-align: center;
       font-size: 17px;
