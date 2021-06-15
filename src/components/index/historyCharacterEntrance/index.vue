@@ -13,6 +13,7 @@
             :portrait="item.portrait"
             :name="item.name"
             :link="item.link"
+            :tags="item.tags"
           />
         </el-col>
       </el-row>
@@ -57,23 +58,27 @@ export default {
 
     const data = [
       {
-        portrait: '',
+        portrait: require('@/assets/image/index/people_2.png'),
         name: '屈原',
+        tags: ['诗人'],
         link: '/people/0'
       },
       {
-        portrait: '',
-        name: '屈原',
+        portrait: require('@/assets/image/index/people_2.png'),
+        name: '伍子胥',
+        tags: ['诗人', '政治家'],
         link: '/people/0'
       },
       {
-        portrait: '',
-        name: '屈原',
+        portrait: require('@/assets/image/index/people_2.png'),
+        name: '曹娥',
+        tags: ['诗人', '文学家'],
         link: '/people/0'
       },
       {
-        portrait: '',
-        name: '屈原',
+        portrait: require('@/assets/image/index/people_2.png'),
+        name: '秋瑾',
+        tags: ['诗人'],
         link: '/people/0'
       }
     ]

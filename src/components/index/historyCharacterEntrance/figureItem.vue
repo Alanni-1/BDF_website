@@ -11,6 +11,9 @@
       <a :href="link" class="team-title">{{ name }}</a>
       <div class="team-details">
         <div class="socials">
+          <!-- <el-tag class="tags" v-for="item of tags" :key="item">
+            {{ item }}
+          </el-tag> -->
           <a href="#url">
             <i class="iconfont icon-taiyang"></i>
           </a>
@@ -32,7 +35,8 @@ export default {
   props: {
     portrait: String,
     name: String,
-    link: String
+    link: String,
+    tags: Array
   },
   setup() {
     return {}
