@@ -6,7 +6,7 @@ import store from './store'
 // 导入入口css
 import '../public/css/main.css'
 import 'element-plus/lib/theme-chalk/base.css'
-
+// import '@/assets/js/dianji.js'
 // element-plus
 import {
   ElButton,

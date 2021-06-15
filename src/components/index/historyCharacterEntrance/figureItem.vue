@@ -4,26 +4,18 @@
   <div class="figure-body">
     <div class="figure-images flexCenter">
       <div class="team-img">
-        <img :src="portrait" alt="" class="radius-image" />
+        <img :src="portrait" alt="" class="radius-image"/>
       </div>
     </div>
     <div class="figure-info">
-      <a :href="link" class="team-title">{{ name }}</a>
+      <router-link :to="link" class="team-title">{{ name }}</router-link>
       <div class="team-details">
         <div class="socials">
-          <!-- <el-tag class="tags" v-for="item of tags" :key="item">
+          <el-tag type="success" class="tags" v-for="item of tags" :key="item">
             {{ item }}
-          </el-tag> -->
-          <a href="#url">
-            <i class="iconfont icon-taiyang"></i>
-          </a>
-          <a href="#url">
-            <i class="iconfont icon-taiyang"></i>
-          </a>
-          <a href="#url">
-            <i class="iconfont icon-taiyang"></i>
-          </a>
+          </el-tag>
         </div>
+        <el-button type="success" plain round>了解详情</el-button>
       </div>
     </div>
   </div>
@@ -62,6 +54,7 @@ export default {
       transition: all 0.5s;
 
       img.radius-image {
+        object-fit: cover;
       }
     }
   }
@@ -70,15 +63,15 @@ export default {
   }
   .figure-info {
     text-align: center;
-    a.team-title {
+    .team-title {
       color: #fff;
       font-size: 26px;
       margin: 1.875rem 0 0.9375rem;
       display: block;
       transition: all 0.2s;
     }
-    a:hover {
-      color: #000;
+    .team-title:hover {
+      color: var(--activeLink);
     }
 
     .team-details {
@@ -86,26 +79,16 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-        a {
-          color: #222;
-          font-size: 16px;
-          display: block;
-          width: 36px;
-          height: 36px;
-          border-radius: 50%;
-          line-height: 36px;
-          text-align: center;
-          transition: all 0.3s ease 0s;
-          background: #fff;
-          margin: 0 5px;
-          i.iconfont.icon-taiyang {
-            font-weight: 700;
-          }
+        margin-bottom: 1.25rem;
+
+        .tags {
+          margin: 0 0.3125rem;
+          cursor: pointer;
         }
-        a:hover {
-          color: #fff;
-          background-color: #000;
-        }
+      }
+      a:hover {
+        color: #fff;
+        background-color: #000;
       }
     }
   }

@@ -53,33 +53,33 @@ export default {
         ]
         instance.play()
       },
-      function () {}
+      function() {}
     )
 
     const data = [
       {
-        portrait: require('@/assets/image/index/people_2.png'),
+        portrait: require('@/assets/image/index/people_0.jpg'),
         name: '屈原',
         tags: ['诗人'],
         link: '/people/0'
       },
       {
-        portrait: require('@/assets/image/index/people_2.png'),
+        portrait: require('@/assets/image/index/people_1.jpg'),
         name: '伍子胥',
         tags: ['诗人', '政治家'],
-        link: '/people/0'
+        link: '/people/1'
       },
       {
-        portrait: require('@/assets/image/index/people_2.png'),
+        portrait: require('@/assets/image/index/people_2.jpg'),
         name: '曹娥',
         tags: ['诗人', '文学家'],
-        link: '/people/0'
+        link: '/people/2'
       },
       {
-        portrait: require('@/assets/image/index/people_2.png'),
+        portrait: require('@/assets/image/index/people_3.png'),
         name: '秋瑾',
         tags: ['诗人'],
-        link: '/people/0'
+        link: '/people/3'
       }
     ]
 
@@ -94,7 +94,7 @@ export default {
 <style lang="less" scoped>
 .figure {
   padding: 3rem 0;
-  background: linear-gradient(75deg, #fd614a 10%, #fd844a);
+  background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
   h1 {
     text-align: center;
     margin-bottom: 3rem;

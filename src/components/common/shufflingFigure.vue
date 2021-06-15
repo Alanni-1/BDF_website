@@ -35,9 +35,7 @@ export default {
   setup(props: any) {
     let activeIndex = ref(0)
     let figureList = [
-      {
-        url: require('@/assets/image/ShufflingFigure1.jpg')
-      },
+
       {
         url: require('@/assets/image/ShufflingFigure2.jpg')
       },
@@ -48,7 +46,10 @@ export default {
         url: require('@/assets/image/ShufflingFigure4.jpg')
       },
       {
-        url: require('@/assets/image/ShufflingFigure4.jpg')
+        url: require('@/assets/image/ShufflingFigure5.jpg')
+      },
+      {
+        url: require('@/assets/image/ShufflingFigure5.jpg')
       }
     ]
     // 轮播函数

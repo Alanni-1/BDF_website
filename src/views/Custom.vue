@@ -12,7 +12,7 @@
         <Parallax
           :title="item1.title"
           :description="item1.description"
-          :img="item1.img"
+          :bg="item1.img"
         >
           <template #other> </template>
         </Parallax>

@@ -87,7 +87,7 @@ export default {
 
 <style lang="less" scoped>
 div.warp {
-  padding: 0 2rem;
+  padding: 0 2rem 2rem 0;
   .item {
     margin-bottom: 2rem;
     cursor: pointer;
@@ -113,7 +113,11 @@ div.warp {
       padding: 1rem;
 
       p {
+        height: 3rem;
+
         margin: 1rem 0;
+
+        line-height: 1.5;
 
         font-size: 1.2rem;
       }

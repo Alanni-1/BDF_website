@@ -27,27 +27,27 @@ export default {
       {
         title: '源于纪念屈原',
         text: '据《史记》“屈原贾生列传”记载，屈原，是春秋时期楚怀王的大臣...',
-        img: require('@/assets/image/featuresAtavar1.jpg'),
+        img: require('@/assets/image/featuresAtavar2.jpg'),
         link: '/people/屈原'
       },
       {
         title: '源于纪念伍子胥',
         text:
           '端午节的第二个传说，在江浙一带流传很广，是纪念春秋时期的伍子胥...',
-        img: require('@/assets/image/featuresAtavar2.jpg'),
+        img: require('@/assets/image/featuresAtavar4.jpg'),
         link: '/people/屈原'
       },
       {
         title: '源于纪念孝女曹娥',
         text:
           '端午节的第三个传说，是为纪念东汉(公元23--220年)孝女曹娥救父投江...',
-        img: require('@/assets/image/featuresAtavar3.jpg'),
+        img: require('@/assets/image/featuresAtavar1.jpg'),
         link: '/people/曹娥'
       },
       {
         title: '源于古越族图腾祭',
         text: '近代大量出土文物和考古研究证实：长江中下游广大地区，在新石器...',
-        img: require('@/assets/image/featuresAtavar4.jpg'),
+        img: require('@/assets/image/featuresAtavar3.jpg'),
         link: '/people/屈原'
       }
     ]
