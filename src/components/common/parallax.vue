@@ -62,12 +62,12 @@ export default {
         description.length - 1,
         description.length
       )
+
       // 判断末尾
-      if (lastStr == '？' || lastStr == '。' || lastStr == '！') {
-        return
+      if (lastStr != '？' || lastStr != '。' || lastStr != '！') {
+        // 添加省略号Î
+        description += '...'
       }
-      // 添加省略号Î
-      description += '...'
     }
 
     new EasyTyper(
