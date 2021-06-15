@@ -1,7 +1,7 @@
 <template>
   <BaseLayout>
     <template #title>
-       <defaultTitle>粽情粽意</defaultTitle>
+      <defaultTitle>粽情粽意</defaultTitle>
     </template>
     <template #content>
       <div class="warp">
@@ -32,7 +32,7 @@
         </el-row>
         <!-- 更多按钮 -->
         <el-row type="flex" justify="center">
-          <el-col span="24">
+          <el-col :span="24">
             <el-button class="learn-more" type="primary" round>
               LEARN MORE SERVICES
             </el-button>

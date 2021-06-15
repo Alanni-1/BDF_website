@@ -8,17 +8,12 @@
 
     <div class="figureContainer">
       <el-row :gutter="20">
-        <el-col :md="6" :sm="12" :xs="12">
-          <figureItem />
-        </el-col>
-        <el-col :md="6" :sm="12" :xs="12">
-          <figureItem />
-        </el-col>
-        <el-col :md="6" :sm="12" :xs="12">
-          <figureItem />
-        </el-col>
-        <el-col :md="6" :sm="12" :xs="12">
-          <figureItem />
+        <el-col :md="6" :sm="12" :xs="12" v-for="item of data" :key="item">
+          <figureItem
+            :portrait="item.portrait"
+            :name="item.name"
+            :link="item.link"
+          />
         </el-col>
       </el-row>
     </div>
@@ -31,7 +26,7 @@ import figureItem from './figureItem.vue'
 import EasyTyper from 'easy-typer-js'
 import { reactive } from 'vue'
 export default {
-  name: 'figure',
+  name: 'historyCharacterEntrance',
   setup() {
     let TyperObj = reactive({
       output: '',
@@ -43,7 +38,7 @@ export default {
       backSpeed: 100,
       sentencePause: false
     })
-    const type = new EasyTyper(
+    new EasyTyper(
       TyperObj,
       [],
       (instance: any) => {
@@ -57,9 +52,33 @@ export default {
         ]
         instance.play()
       },
-      function() {}
+      function () {}
     )
-    return { TyperObj }
+
+    const data = [
+      {
+        portrait: '',
+        name: '屈原',
+        link: '/people/0'
+      },
+      {
+        portrait: '',
+        name: '屈原',
+        link: '/people/0'
+      },
+      {
+        portrait: '',
+        name: '屈原',
+        link: '/people/0'
+      },
+      {
+        portrait: '',
+        name: '屈原',
+        link: '/people/0'
+      }
+    ]
+
+    return { TyperObj, data }
   },
   components: {
     figureItem
@@ -77,8 +96,7 @@ export default {
     color: #fff;
     font-size: 2.8125rem;
     height: 3.75rem;
-    letter-spacing: .5rem;
-
+    letter-spacing: 0.5rem;
   }
   .figureContainer {
     padding: 3rem 0.9375rem;
@@ -86,5 +104,4 @@ export default {
     margin: 0 auto;
   }
 }
-
 </style>

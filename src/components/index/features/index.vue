@@ -6,7 +6,6 @@
       <el-row :gutter="20">
         <el-col :md="6" :sm="12" v-for="item in FeaturesArray" :key="item">
           <FeaturesItem
-            :key="i"
             :title="item.title"
             :text="item.text"
             :img="item.img"

@@ -4,15 +4,11 @@
   <div class="figure-body">
     <div class="figure-images flexCenter">
       <div class="team-img">
-        <img
-          src="https://pic2.zhimg.com/80/v2-c0984f24d1410726c71576e3c45c7453_720w.jpg?source=1940ef5c"
-          alt=""
-          class="radius-image"
-        />
+        <img :src="portrait" alt="" class="radius-image" />
       </div>
     </div>
     <div class="figure-info">
-      <a href="#url" class="team-title">Lyn Victor</a>
+      <a :href="link" class="team-title">{{ name }}</a>
       <div class="team-details">
         <div class="socials">
           <a href="#url">
@@ -33,7 +29,11 @@
 <script lang="ts">
 export default {
   name: 'figureItem',
-
+  props: {
+    portrait: String,
+    name: String,
+    link: String
+  },
   setup() {
     return {}
   }

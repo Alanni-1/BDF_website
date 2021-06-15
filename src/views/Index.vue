@@ -42,7 +42,7 @@
       <!-- 新闻 -->
       <News />
       <!-- 历史人物介绍 -->
-      <Figure />
+      <HistoryCharacterEntrance />
       <P2 />
     </div>
   </div>
@@ -55,8 +55,8 @@ import { ref, reactive } from 'vue'
 import Features from '@/components/index/features'
 // 庆祝活动组件
 import Celebrations from '@/components/index/celebrations.vue'
-// 庆祝活动组件
-import Figure from '@/components/index/figure'
+// 历史人物入口组件
+import HistoryCharacterEntrance from '@/components/index/historyCharacterEntrance'
 
 // 新闻组件
 import News from '@/components/index/news'
@@ -71,7 +71,7 @@ export default {
   components: {
     Features,
     Celebrations,
-    Figure,
+    HistoryCharacterEntrance,
     News,
     P2,
     CustomEntrance

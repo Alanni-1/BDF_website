@@ -1,5 +1,5 @@
 <template>
-  <div class="parallax-warp" :style="{ backgroundImage: `url(${img})` }">
+  <div class="parallax-warp" :style="{ backgroundImage: `url(${bg})` }">
     <div class="parallax">
       <div class="info-warp">
         <!-- 标题 -->
@@ -36,9 +36,9 @@ export default {
       type: String,
       required: true
     },
-    img: {
-      type: String,
-      required: true
+    // 背景图片
+    bg: {
+      type: String
     }
   },
   setup({ description }: any) {
@@ -130,6 +130,8 @@ export default {
       }
 
       p {
+        height: 2rem;
+
         margin: 1rem;
 
         font-size: 20px;

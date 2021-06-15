@@ -35,7 +35,6 @@ export default {
       img: props.img,
       link: props.link
     }
-    console.log(featuresObj)
 
     return { featuresObj }
   }
