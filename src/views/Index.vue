@@ -2,7 +2,9 @@
   <div>
     <div class="header">
       <!-- 轮播图 -->
-      <el-carousel height="100vh" trigger="click" loop arrow="never">
+
+      <shufflingFigure :figureList="figureList" />
+      <!-- <el-carousel height="100vh" trigger="click" loop arrow="never">
         <el-carousel-item>
           <el-image
             fit="cover"
@@ -31,7 +33,8 @@
             :src="require('@/assets/image/ShufflingFigure4.jpg')"
           ></el-image>
         </el-carousel-item>
-      </el-carousel>
+      </el-carousel> -->
+
       <!-- 遮罩层 -->
       <div class="msk"></div>
     </div>
@@ -50,7 +53,8 @@
 
 <script>
 import { ref, reactive } from 'vue'
-
+// 轮播图组件
+import shufflingFigure from '@/components/common/shufflingFigure.vue'
 // 特性分类组件
 import Features from '@/components/index/features'
 // 庆祝活动组件
@@ -68,13 +72,27 @@ import CustomEntrance from '@/components/index/customEntrance'
 
 export default {
   name: 'index',
+  setup() {
+    let figureList = [
+      {
+        url: '@/assets/image/ShufflingFigure1.jpg'
+      },
+      {
+        url: '@/assets/image/ShufflingFigure2.jpg'
+      }
+    ]
+    return {
+      figureList
+    }
+  },
   components: {
     Features,
     Celebrations,
     HistoryCharacterEntrance,
     News,
     Answer,
-    CustomEntrance
+    CustomEntrance,
+    shufflingFigure
   }
 }
 </script>

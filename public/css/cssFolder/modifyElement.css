@@ -25,5 +25,5 @@
 }
 
 .el-pagination.is-background .el-pager li:not(.disabled):hover {
-  color: var (--activeLink);
+  color: var (--activeLink) !important;
 }
