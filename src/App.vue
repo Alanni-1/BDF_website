@@ -25,7 +25,7 @@ import AboutFeasts from '@/components/common/aboutFeasts.vue'
 import Copyright from '@/components/common/copyright.vue'
 // 返回顶部
 import BackToTop from '@/components/common/backToTop.vue'
-import { ref } from '@vue/reactivity'
+
 export default {
   name: 'app',
   setup() {
