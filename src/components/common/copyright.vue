@@ -3,7 +3,10 @@
   <div class="copyright">
     <el-row type="flex" justify="space-between">
       <el-col class="copyright-info" :md="12" :sm="24">
-        <p>© 2021 Happy Events. All rights reserved. Design by W3Layouts</p>
+        <p>
+          ©
+          2021广东省高校技术高级技工学校-18计算机高技升读-郑嘉俊，文慧涛，梁洛华，梁洛侨-版权所有
+        </p>
       </el-col>
       <el-col class="copyright-contact" :md="6" :sm="24">
         <ul>
@@ -33,7 +36,7 @@
   </div>
 </template>
 
-<script lang='ts'>
+<script lang="ts">
 export default {
   name: 'copyright',
   setup() {
@@ -42,7 +45,7 @@ export default {
 }
 </script>
 
-<style lang='less' scoped>
+<style lang="less" scoped>
 .copyright {
   padding: 1rem 3rem;
 
@@ -54,8 +57,12 @@ export default {
 
   div.copyright-info {
     line-height: 2;
-
-    color: var(--maanColor);
+    color: #606266;
+    p {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
 
     @media (max-width: 992px) {
       text-align: center;

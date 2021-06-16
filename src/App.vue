@@ -3,13 +3,10 @@
     <!-- 导航栏 -->
     <NavigationBar />
   </div>
-
   <transition name="fade" mode="out-in">
     <router-view></router-view>
   </transition>
   <div class="footer">
-    <AboutFeasts />
-    <!-- 版权 -->
     <Copyright />
     <!-- 返回顶部 -->
     <BackToTop />
@@ -35,7 +32,7 @@ export default {
     NavigationBar,
     AboutFeasts,
     Copyright,
-    BackToTop
+    BackToTop,
   }
 }
 </script>

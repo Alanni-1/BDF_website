@@ -31,12 +31,16 @@
         <span class="title">联系方式</span>
         <ul class="contact-list">
           <li>
-            <i></i>
-            <a href="tel:+12 23456790">12345678900</a>
+            电话：
+            <a href="tel:+12 23456790">13378446314</a>
           </li>
           <li>
-            <i></i>
-            <a href="mailto:info@example.com">info@example.com</a>
+            微信：
+            <a href="tel:+12 23456790">Jj13378446314</a>
+          </li>
+          <li>
+            邮箱：
+            <a href="mailto:info@example.com">2426091982@qq.com</a>
           </li>
         </ul>
       </el-col>

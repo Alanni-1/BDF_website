@@ -18,6 +18,7 @@
       <News />
       <!-- 历史人物介绍 -->
       <HistoryCharacterEntrance />
+      <!-- 回答 -->
       <Answer />
     </div>
   </div>

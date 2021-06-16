@@ -5,7 +5,9 @@
     :bg="background"
   ></Parallax>
   <BaseLayout>
-    <template #title> 人物描述 </template>
+    <template #title>
+      <DefaultTitle>节日由来 </DefaultTitle>
+    </template>
     <template #content>
       <div class="description">
         {{ description }}
@@ -17,7 +19,7 @@
 <script lang="ts">
 import Parallax from '@/components/common/parallax.vue'
 import BaseLayout from '@/components/common/baseLayout.vue'
-
+import DefaultTitle from '@/components/common/defaultTitle.vue'
 export default {
   name: 'peopleExhibition',
   props: {
@@ -28,7 +30,8 @@ export default {
   },
   components: {
     Parallax,
-    BaseLayout
+    BaseLayout,
+    DefaultTitle
   },
   setup({ id }: any) {
     let data: any = [
@@ -81,8 +84,7 @@ export default {
 
 <style lang="less" scoped>
 .description {
-  padding: 2rem 5rem;
-  margin-bottom: 2rem;
+  padding: 2rem 5rem 4rem;
 
   letter-spacing: 0.1rem;
   line-height: 2;
