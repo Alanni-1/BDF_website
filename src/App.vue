@@ -3,7 +3,10 @@
     <!-- 导航栏 -->
     <NavigationBar />
   </div>
-  <router-view />
+
+  <transition name="fade" mode="out-in">
+    <router-view></router-view>
+  </transition>
   <div class="footer">
     <AboutFeasts />
     <!-- 版权 -->
@@ -22,6 +25,7 @@ import AboutFeasts from '@/components/common/aboutFeasts.vue'
 import Copyright from '@/components/common/copyright.vue'
 // 返回顶部
 import BackToTop from '@/components/common/backToTop.vue'
+import { ref } from '@vue/reactivity'
 export default {
   name: 'app',
   setup() {
@@ -35,4 +39,14 @@ export default {
   }
 }
 </script>
-<style lang="less"></style>
+<style lang="less">
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 1.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>
