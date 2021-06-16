@@ -1,15 +1,18 @@
 <template>
   <div class="header">
     <!-- 导航栏 -->
-    <NavigationBar />
+    <NavigationBar/>
   </div>
-  <transition name="fade" mode="out-in">
+
+  <!-- <transition name="fade" mode="ease"> -->
     <router-view></router-view>
-  </transition>
+  <!-- </transition> -->
   <div class="footer">
-    <Copyright />
+    <AboutFeasts class="wow fadeInUp"/>
+    <!-- 版权 -->
+    <Copyright class="wow fadeInUp"/>
     <!-- 返回顶部 -->
-    <BackToTop />
+    <BackToTop class="wow fadeInRight" data-wow-delay="0.5s"/>
   </div>
 </template>
 

@@ -239,7 +239,7 @@ export default {
 .navBox {
   width: 100%;
   padding: 0 1.25rem;
-  transition: all 0.2s;
+  transition: all 0.2s, background-color 0.4s ease;
   position: fixed;
   z-index: 999;
   .navList {

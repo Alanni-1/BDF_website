@@ -19,6 +19,7 @@ export default {
 .base-layout {
   padding: 3rem 3rem 0 3rem;
   background-color: var(--bgc);
+  transition: background-color 0.4s ease;
   h1.baseLayout-title {
     padding: 2.8125rem;
 

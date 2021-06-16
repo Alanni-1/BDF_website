@@ -41,6 +41,8 @@ export default {
 div.clebration {
   padding: 48px 0;
   background-color: var(--bgc);
+  transition: background-color 0.4s ease;
+
   .clebrationBox {
     padding: 48px 0;
     .clebrationContainer {

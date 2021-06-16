@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="header">
+    <div class="header wow pulse">
       <!-- 轮播图 -->
 
       <shufflingFigure :figureList="figureList" />
@@ -9,17 +9,16 @@
     </div>
     <div class="main">
       <!-- 端午节 -->
-      <Celebrations />
+      <Celebrations class="wow fadeInUp"/>
       <!-- 风俗 -->
-      <CustomEntrance />
+      <CustomEntrance class="wow fadeInUp" />
       <!-- 起源 -->
-      <Features />
+      <Features class="wow fadeInUp" />
       <!-- 新闻 -->
-      <News />
+      <News class="wow fadeInUp" />
       <!-- 历史人物介绍 -->
-      <HistoryCharacterEntrance />
-      <!-- 回答 -->
-      <Answer />
+      <HistoryCharacterEntrance class="wow fadeInUp" />
+      <Answer class="wow fadeInUp" />
     </div>
   </div>
 </template>

@@ -13,6 +13,7 @@
           :title="item1.title"
           :description="item1.description"
           :bg="item1.img"
+          class="wow fadeInDown"
         >
           <template #other> </template>
         </Parallax>
