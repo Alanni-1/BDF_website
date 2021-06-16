@@ -44,7 +44,7 @@ import { ref, reactive } from 'vue'
 import CustomEntrance from '@/components/index/customEntrance.vue'
 import Parallax from '@/components/common/parallax.vue'
 export default {
-  name: 'Custom',
+  name: 'custom',
   setup() {
     // 滚动到顶部
     document.body.scrollTop = 0
