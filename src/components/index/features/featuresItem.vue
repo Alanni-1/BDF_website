@@ -14,7 +14,17 @@
       <p class="feature-text">
         {{ featuresObj.text }}
       </p>
-      <a href="#" class="feature-moreText flexCenter">了解详情</a>
+      <!-- <a href="#" class="feature-moreText flexCenter">了解详情</a> -->
+      <div class="flexCenter">
+        <el-button
+          @click="$router.push(featuresObj.link)"
+          class="feature-moreText"
+          plain
+          type="success"
+        >
+          了解详情
+        </el-button>
+      </div>
     </div>
   </div>
 </template>
@@ -35,7 +45,8 @@ export default {
       img: props.img,
       link: props.link
     }
-
+    console.log(featuresObj.link);
+    
     return { featuresObj }
   }
 }
@@ -47,6 +58,12 @@ div.feature-body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 1.875rem 0;
+  transition: all 0.3s;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
   div.feature-images {
     width: 8.125rem;
     height: 8.125rem;
@@ -87,17 +104,16 @@ div.feature-body {
       text-align: center;
       font-size: 17px;
     }
-
-    a.feature-moreText {
-      color: var(--activeLink);
-      font-weight: 700;
-      margin: 24px;
-      font-size: 15px;
-      transition: all 0.2s;
-    }
-    a:hover {
-      color: var(--mainColor);
-    }
+    // a.feature-moreText {
+    //   color: var(--activeLink);
+    //   font-weight: 700;
+    //   margin: 24px;
+    //   font-size: 15px;
+    //   transition: all 0.2s;
+    // }
+    // a:hover {
+    //   color: var(--mainColor);
+    // }
   }
 }
 </style>

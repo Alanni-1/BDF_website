@@ -29,7 +29,12 @@
         <!-- 更多按钮 -->
         <el-row>
           <el-col class="question-warp">
-            <el-button class="question-buttom" type="primary" round>
+            <el-button
+              @click="showNotify"
+              class="question-buttom"
+              type="success"
+              round
+            >
               我要提问
             </el-button>
           </el-col>
@@ -43,7 +48,7 @@
 import BaseLayout from '@/components/common/baseLayout.vue'
 import defaultTitle from '@/components/common/defaultTitle.vue'
 import { reactive } from '@vue/reactivity'
-
+import { ElNotification } from 'element-plus'
 export default {
   name: 'answer',
   components: {
@@ -77,8 +82,17 @@ export default {
           '春秋时期，用茭白叶包糯米成牛角状，称“角黍”，用竹筒装米密封烤熟，称“筒粽”。后来才是东汉时候的咸水粽。'
       }
     ])
+    // 展示消息
+    const showNotify = () => {
+      ElNotification({
+        title: '提问成功',
+        message: '耐心等待回答吧！',
+        type: 'success'
+      })
+    }
     return {
-      data
+      data,
+      showNotify
     }
   }
 }
@@ -88,8 +102,8 @@ export default {
 div.warp {
   div.item-warp {
     padding: 1rem;
-
     .item {
+      cursor: pointer;
       .item-body {
         display: flex;
         justify-content: space-between;
@@ -128,14 +142,12 @@ div.warp {
     justify-content: center;
 
     .question-buttom {
-      margin: 3rem 0;
-
-      background: #fd614a;
-      border: none;
+      margin: 3rem 0 0;
+      transition: all 0.2s;
 
       &:hover {
-        background-color: var(--activeLink);
-        color: #000000;
+        background: #fd614a;
+        border: 1px solid #fd614a;
       }
     }
   }

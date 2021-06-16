@@ -60,25 +60,25 @@ export default {
       {
         portrait: require('@/assets/image/index/people_0.jpg'),
         name: '屈原',
-        tags: ['诗人'],
+        tags: ['诗人', '政治家'],
         link: '/people/0'
       },
       {
         portrait: require('@/assets/image/index/people_1.jpg'),
         name: '伍子胥',
-        tags: ['诗人', '政治家'],
+        tags: ['大夫', '军事家'],
         link: '/people/1'
       },
       {
         portrait: require('@/assets/image/index/people_2.jpg'),
         name: '曹娥',
-        tags: ['诗人', '文学家'],
+        tags: ['孝女'],
         link: '/people/2'
       },
       {
         portrait: require('@/assets/image/index/people_3.png'),
         name: '秋瑾',
-        tags: ['诗人'],
+        tags: ['女权运动家', '民主革命家'],
         link: '/people/3'
       }
     ]
@@ -94,7 +94,8 @@ export default {
 <style lang="less" scoped>
 .figure {
   padding: 3rem 0;
-  background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+
+  background-image: linear-gradient(120deg, var(--activeLink) 0%, #b5f184 80%);
   h1 {
     text-align: center;
     margin-bottom: 3rem;
@@ -104,7 +105,7 @@ export default {
     letter-spacing: 0.5rem;
   }
   .figureContainer {
-    padding: 3rem 0.9375rem;
+    padding: 3rem 0.9375rem 0;
     max-width: 1200px;
     margin: 0 auto;
   }

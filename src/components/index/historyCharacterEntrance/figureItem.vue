@@ -3,8 +3,8 @@
 
   <div class="figure-body">
     <div class="figure-images flexCenter">
-      <div class="team-img">
-        <img :src="portrait" alt="" class="radius-image"/>
+      <div class="team-img" @click="$router.push(link)">
+        <img :src="portrait" alt="" class="radius-image" />
       </div>
     </div>
     <div class="figure-info">
@@ -15,7 +15,9 @@
             {{ item }}
           </el-tag>
         </div>
-        <el-button type="success" plain round>了解详情</el-button>
+        <el-button @click="$router.push(link)" type="success" plain round
+          >了解详情</el-button
+        >
       </div>
     </div>
   </div>
@@ -42,16 +44,19 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 3.25rem;
   .figure-images.flexCenter {
     .team-img {
-      height: 14.25rem;
-      width: 14.25rem;
+      height: 12.25rem;
+      width: 12.25rem;
       border-radius: 50%;
       overflow: hidden;
-      border: 7px solid #fff;
+      border: 0.4375rem solid #fff;
+      background-color: #fff;
       cursor: pointer;
       transition: all 0.5s;
+      box-shadow: 0 8px 10px rgba(10, 16, 20, 0.1),
+        0 0 5px rgba(10, 16, 20, 0.1);
 
       img.radius-image {
         object-fit: cover;
@@ -83,7 +88,6 @@ export default {
 
         .tags {
           margin: 0 0.3125rem;
-          cursor: pointer;
         }
       }
       a:hover {

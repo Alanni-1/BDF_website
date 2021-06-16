@@ -9,7 +9,7 @@
             <el-image :src="require('@/assets/image/端午logo.png')" fil="cover">
             </el-image>
           </div>
-          <h1 class="text">浓情端午，放粽一下!</h1>
+          <h1 class="text">浓情端午，放粽一夏!</h1>
         </div>
       </el-col>
       <el-col :lg="13" :md="14" :sm="11" :xs="4">

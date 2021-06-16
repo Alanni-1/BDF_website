@@ -12,7 +12,7 @@
                 <img :src="item.img" />
               </div>
               <div class="item-body">
-                <el-tag class="item-tag" v-for="tag of item.tags" :key="tag">{{
+                <el-tag type="success" class="item-tag" v-for="tag of item.tags" :key="tag">{{
                   tag
                 }}</el-tag>
                 <p>{{ item.title }}</p>

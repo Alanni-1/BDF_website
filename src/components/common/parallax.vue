@@ -141,10 +141,8 @@ export default {
       }
 
       p {
-        height: 2rem;
-
         margin: 1rem;
-
+        min-height: 26px;
         font-size: 20px;
       }
     }

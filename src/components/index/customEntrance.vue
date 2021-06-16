@@ -2,7 +2,7 @@
   <!-- 端午习俗 -->
   <Parallax :title="title" :description="description" :bg="img">
     <template #other>
-      <el-button class="learn-more" type="primary" round> 了解更多 </el-button>
+      <el-button class="learn-more" type="success" @click="$router.push(`/custom`)" round> 了解更多 </el-button>
     </template>
   </Parallax>
 </template>
@@ -35,14 +35,11 @@ export default {
 
 <style lang="less" scoped>
 .learn-more {
-  margin: 3rem 0;
-
-  background: #fd614a;
-  border: none;
+  margin: 3rem 0 0;
   transition: all 0.2s;
   &:hover {
-    background-color: var(--activeLink);
-    color: #000000;
+    background: #fd614a;
+    border: 1px solid #fd614a;
   }
 }
 </style>

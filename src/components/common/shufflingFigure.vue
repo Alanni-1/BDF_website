@@ -35,18 +35,18 @@ export default {
   setup(props: any) {
     let activeIndex = ref(0)
     let figureList = [
-
       {
         url: require('@/assets/image/ShufflingFigure2.jpg')
       },
       {
-        url: require('@/assets/image/ShufflingFigure3.jpg')
+        url: require('@/assets/image/ShufflingFigure6.jpg')
       },
       {
         url: require('@/assets/image/ShufflingFigure4.jpg')
       },
+
       {
-        url: require('@/assets/image/ShufflingFigure5.jpg')
+        url: require('@/assets/image/ShufflingFigure3.jpg')
       },
       {
         url: require('@/assets/image/ShufflingFigure5.jpg')

@@ -61,7 +61,7 @@ export default {
         description: `秋瑾是六月五日殉国,后人为敬仰其诗,复哀其忠勇事迹,乃与诗人节合并举行纪念,而诗人节亦因纪念爱国诗人屈原而定为端午节.
         秋瑾字睿卿竞雄,号鉴湖女侠,小字玉姑,浙江绍兴人,幼年擅长诗、词、歌、赋,且喜骑马击剑,有花木兰、秦良玉在世之称.
         28岁时参加革命,影响极大,预谋起义,开会时为清兵所捕,不屈,于光绪三十三年六月五日在绍兴轩亨口英勇就义.`,
-        background: require('@/assets/image/historyPeople/0.png')
+        background: require('@/assets/image/historyPeople/3.jpg')
       }
     ]
 

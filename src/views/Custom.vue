@@ -46,6 +46,9 @@ import Parallax from '@/components/common/parallax.vue'
 export default {
   name: 'Custom',
   setup() {
+    // 滚动到顶部
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0
     // 视差数据数组
     let parallaxOptionArray = [
       {
