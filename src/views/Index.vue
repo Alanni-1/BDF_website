@@ -4,43 +4,15 @@
       <!-- 轮播图 -->
 
       <shufflingFigure :figureList="figureList" />
-      <!-- <el-carousel height="100vh" trigger="click" loop arrow="never">
-        <el-carousel-item>
-          <el-image
-            fit="cover"
-            style="height:100%"
-            :src="require('@/assets/image/ShufflingFigure1.jpg')"
-          ></el-image>
-        </el-carousel-item>
-        <el-carousel-item>
-          <el-image
-            fit="cover"
-            style="height:100%"
-            :src="require('@/assets/image/ShufflingFigure5.jpg')"
-          ></el-image>
-        </el-carousel-item>
-        <el-carousel-item>
-          <el-image
-            fit="cover"
-            style="height:100%"
-            :src="require('@/assets/image/ShufflingFigure3.jpg')"
-          ></el-image>
-        </el-carousel-item>
-        <el-carousel-item>
-          <el-image
-            style="height:100%"
-            fit="cover"
-            :src="require('@/assets/image/ShufflingFigure4.jpg')"
-          ></el-image>
-        </el-carousel-item>
-      </el-carousel> -->
-
       <!-- 遮罩层 -->
       <div class="msk"></div>
     </div>
     <div class="main">
+      <!-- 端午节 -->
       <Celebrations />
+      <!-- 风俗 -->
       <CustomEntrance />
+      <!-- 起源 -->
       <Features />
       <!-- 新闻 -->
       <News />
@@ -73,6 +45,8 @@ import CustomEntrance from '@/components/index/customEntrance'
 export default {
   name: 'index',
   setup() {
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0
     let figureList = [
       {
         url: '@/assets/image/ShufflingFigure1.jpg'
@@ -98,11 +72,6 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.wu1 {
-  width: 100%;
-  height: 100vh;
-  background-color: #777;
-}
 .msk {
   position: absolute;
   left: 0;
@@ -111,6 +80,6 @@ export default {
   height: 100vh;
   z-index: 2;
   background-color: #000;
-  opacity: 0.2;
+  opacity: 0.15;
 }
 </style>

@@ -6,15 +6,19 @@
     <template #content>
       <div class="warp">
         <el-row :gutter="30">
-          <el-col :md="8" :sm="12" :xs="24" v-for="item of lists" :key="item">
+          <el-col :md="6" :sm="12" :xs="24" v-for="item of lists" :key="item">
             <el-card class="item" :body-style="{ padding: '0' }" shadow="hover">
               <div class="item-img">
                 <img :src="item.img" />
               </div>
               <div class="item-body">
-                <el-tag type="success" class="item-tag" v-for="tag of item.tags" :key="tag">{{
-                  tag
-                }}</el-tag>
+                <el-tag
+                  type="success"
+                  class="item-tag"
+                  v-for="tag of item.tags"
+                  :key="tag"
+                  >{{ tag }}</el-tag
+                >
                 <p>{{ item.title }}</p>
 
                 <div class="item-author">
@@ -67,12 +71,22 @@ export default {
         }
       },
       {
+        img: require('@/assets/image/news4.jpg'),
+        tags: ['龙舟', '竞赛'],
+        title: '端午至:龙舟竞渡粽飘香',
+        author: {
+          name: '人民日报',
+          time: '2021年6月14日',
+          avatar: require('@/assets/image/newsAvatar4.jpg')
+        }
+      },
+      {
         img: require('@/assets/image/news3.jpg'),
         tags: ['统计', '人们'],
         title: '端午假期全国共接待国内游客4880.9万人次',
         author: {
           name: '中国日报',
-          time: '2021年6月14日',
+          time: '2021年6月15日',
           avatar: require('@/assets/image/newsAvatar3.jpg')
         }
       }
@@ -87,8 +101,7 @@ export default {
 
 <style lang="less" scoped>
 div.warp {
-  padding: 0 4rem 2rem 4rem;
-
+  padding: 2rem 1rem 4rem;
   .item {
     margin-bottom: 2rem;
     cursor: pointer;

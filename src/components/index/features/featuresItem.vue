@@ -2,12 +2,18 @@
   <!-- 特性组件Item -->
 
   <div class="feature-body">
-    <div class="feature-images flexCenter">
+    <div
+      @click="$router.push(featuresObj.link)"
+      class="feature-images flexCenter"
+    >
       <el-image :src="featuresObj.img" fit="cover"></el-image>
     </div>
     <div class="feature-info">
       <a href="#">
-        <h3 class="feature-titel flexCenter">
+        <h3
+          @click="$router.push(featuresObj.link)"
+          class="feature-titel flexCenter"
+        >
           {{ featuresObj.title }}
         </h3>
       </a>
@@ -45,8 +51,8 @@ export default {
       img: props.img,
       link: props.link
     }
-    console.log(featuresObj.link);
-    
+    console.log(featuresObj.link)
+
     return { featuresObj }
   }
 }

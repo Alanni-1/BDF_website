@@ -17,7 +17,7 @@
               <el-image
                 fit="cover"
                 style="height:100%"
-                src="http://n1-q.mafengwo.net/s6/M00/F4/14/wKgB4lOFtLuAHh8hAAETZ6Sh1SA65.jpeg?imageView2%2F2%2Fw%2F2000%2Fh%2F600%2Fq%2F90"
+                :src="require('@/assets/image/clebrationImg1.jpg')"
               >
               </el-image>
             </div>
@@ -39,7 +39,6 @@ export default {
 
 <style lang="less" scoped>
 div.clebration {
-  border-top: 1px solid #e6e6e6;
   padding: 48px 0;
   background-color: var(--bgc);
   .clebrationBox {

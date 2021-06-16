@@ -108,6 +108,9 @@ export default {
     transform: translateX(-50%);
     display: flex;
     z-index: 3;
+    background-color: rgba(0, 0, 0, .2);
+    padding: 5px;
+    border-radius: 10px;
     .point {
       cursor: pointer;
       margin: 0 5px;
@@ -115,7 +118,7 @@ export default {
       height: 10px;
       background-color: #fff;
       border-radius: 50%;
-      opacity: 0.5;
+      opacity: 0.8;
       transition: all 0.2s;
     }
     .active {

@@ -4,7 +4,7 @@
     <el-row type="flex" justify="space-between">
       <el-col :lg="11" :md="10" :sm="13" :xs="18">
         <!-- 左边布局 -->
-        <div class="navLeft">
+        <div class="navLeft" @click="$router.push(`/index`)">
           <div class="logo">
             <el-image :src="require('@/assets/image/端午logo.png')" fil="cover">
             </el-image>
@@ -16,16 +16,20 @@
         <!-- 右边布局 -->
         <div class="navRight" v-if="!isShowToggle">
           <div class="navItem">
-            <a href="#">首页</a>
+            <router-link to="/index">首页</router-link>
           </div>
           <div class="navItem">
-            <a href="#">关于我们</a>
+            <router-link to="/custom">端午习俗</router-link>
           </div>
           <div class="navItem">
             <!-- 搜索框 -->
             <div class="searchInput">
-              <input type="text" placeholder="请输入你想要输入的内容" />
-              <i class="iconfont icon-sousuo"></i>
+              <input
+                type="text"
+                v-model="searchValue"
+                placeholder="请输入你想要输入的内容"
+              />
+              <i class="iconfont icon-sousuo" @click="goToSearch"></i>
             </div>
           </div>
           <div class="navItem">
@@ -58,8 +62,10 @@
     <transition name="el-zoom-in-top">
       <ul class="navList" v-show="isShowNavList" @click="toggleList">
         <li>首页</li>
-        <li>关于我们</li>
-        <li>其他节日</li>
+        <li>端午的由来</li>
+        <li>粽要新闻</li>
+        <li>有关人物</li>
+        <li>粽情粽意</li>
       </ul>
     </transition>
   </div>
@@ -88,7 +94,9 @@ export default {
       /*  导航栏专属2级字体*/
       navSecondaryTextColor = '#909399',
       /* 导航栏专属背景 */
-      navBgc = '#fff'
+      navBgc = '#fff',
+      // 搜索框的值
+      searchValue = ref('')
 
     // 监听滚动
     window.onscroll = () => {
@@ -140,6 +148,15 @@ export default {
     } else {
       // 不展示切换按钮
       isShowToggle.value = false
+    }
+
+    // 搜索input
+    const goToSearch = () => {
+      if (searchValue.value.trim().length !== 0) {
+        window.open(`https://www.baidu.com/s?word=${searchValue.value}`)
+      }
+      console.log(1);
+      
     }
 
     // 切换list
@@ -206,7 +223,9 @@ export default {
       toggleList,
       isShowNavList,
       changeIsOpenDarkModel,
-      isOpenDarkModel
+      isOpenDarkModel,
+      goToSearch,
+      searchValue
     }
   }
 }
@@ -226,7 +245,7 @@ export default {
   .navList {
     position: absolute;
     // background-color: #fff;
-    bottom: -155px;
+    bottom: -259px;
     right: 0;
     box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
     border-radius: 0px 0px 7px 7px;
@@ -252,13 +271,22 @@ export default {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    color: var(--navTextColor);
+    cursor: pointer;
+
     div.logo {
       width: 6rem;
       height: 100%;
-      padding: .5rem 1rem;
+      padding: 0.5rem 1rem;
     }
     h1 {
-      color: var(--navTextColor);
+      -webkit-user-select: none;
+
+      -moz-user-select: none;
+
+      -ms-user-select: none;
+
+      user-select: none;
     }
     div.text {
     }
@@ -365,7 +393,7 @@ export default {
 .el-button:focus,
 .el-button,
 .el-button:hover {
-  background-color: #ffd700 !important;
+  background-color: var(--activeLink) !important;
   color: #fff;
   border: none;
 }
