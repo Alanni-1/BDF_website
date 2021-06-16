@@ -7,10 +7,26 @@
       </el-col>
       <el-col class="copyright-contact" :md="6" :sm="24">
         <ul>
-          <li><a href="#">1</a></li>
-          <li><a href="#">1</a></li>
-          <li><a href="#">1</a></li>
-          <li><a href="#">1</a></li>
+          <li>
+            <a href="#">
+              <i style="color: #333333" class="iconfont icon-github"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#">
+              <i style="color: #49b7f9" class="iconfont icon-qq"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#">
+              <i style="color: #63af4b" class="iconfont icon-WeChat"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#">
+              <i style="color: #d81e06" class="iconfont icon-weibo-copy"></i
+            ></a>
+          </li>
         </ul>
       </el-col>
     </el-row>
@@ -30,8 +46,6 @@ export default {
 .copyright {
   padding: 1rem 3rem;
 
-  color: var(--maanColor);
-
   @media (max-width: 992px) {
     & > div {
       flex-direction: column-reverse;
@@ -40,6 +54,8 @@ export default {
 
   div.copyright-info {
     line-height: 2;
+
+    color: var(--maanColor);
 
     @media (max-width: 992px) {
       text-align: center;
@@ -69,14 +85,15 @@ export default {
 
         margin: 0 0.5rem;
 
-        background-color: rgba(253, 97, 74, 0.11);
-        border-radius: 50%;
-
         cursor: pointer;
 
         a {
           text-decoration: none;
-          color: var(--mainColor);
+
+          i {
+            font-size: 30px;
+            color: initial;
+          }
         }
       }
     }

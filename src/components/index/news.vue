@@ -87,7 +87,8 @@ export default {
 
 <style lang="less" scoped>
 div.warp {
-  padding: 0 2rem 2rem 0;
+  padding: 0 4rem 2rem 4rem;
+
   .item {
     margin-bottom: 2rem;
     cursor: pointer;

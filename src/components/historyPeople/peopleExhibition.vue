@@ -81,8 +81,12 @@ export default {
 
 <style lang="less" scoped>
 .description {
+  padding: 2rem 5rem;
+  margin-bottom: 2rem;
+
   letter-spacing: 0.1rem;
-  line-height: 1.5;
+  line-height: 2;
+  text-indent: 3.2rem;
 
   font-size: 1.5rem;
   color: var(--navSecondaryColor);
