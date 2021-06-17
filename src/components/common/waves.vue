@@ -32,7 +32,7 @@ export default {
     let wavesConfig = reactive({
       maxSize: 300, // px，波纹最大尺寸
       minSize: 100, // px，波纹最小尺寸
-      zIndexCount: 999, // 波纹父元素其z-index数值
+      zIndexCount: 9999, // 波纹父元素其z-index数值
       waveColor: '#67C23A', //波纹基础颜色
       total: 3 //波纹圈层数
     })

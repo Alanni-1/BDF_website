@@ -17,9 +17,10 @@
         <el-col :md="12">
           <div class="aboutVedio">
             <video
-              :src="require('@/assets/video/duanwu2.mp4')"
-              :poster="require('@/assets/video/cover2.jpg')"
+              src="@/assets/video/duanwu2.mp4"
+              poster="@/assets/video/cover1.jpg"
               controls="controls"
+              preload
             >
               您的浏览器不支持 video 标签。
             </video>
@@ -28,10 +29,10 @@
         <el-col :md="12">
           <div class="aboutVedio">
             <video
-              :src="require('@/assets/video/duanwu1.mp4')"
-              :poster="require('@/assets/video/cover1.png')"
+              src="@/assets/video/duanwu1.mp4"
+              poster="@/assets/video/cover2.jpg"
               controls="controls"
-              poster="cover1"
+              preload
             >
               您的浏览器不支持 video 标签。
             </video>
@@ -92,7 +93,7 @@ export default {
   background-color: var(--bgc);
   transition: background-color 0.4s ease;
   opacity: 0.9;
-  
+
   .featuresContainer {
     padding: 3rem 0.9375rem 0;
     max-width: 1400px;
