@@ -13,6 +13,31 @@
           />
         </el-col>
       </el-row>
+      <el-row class="videoRow" :gutter="20">
+        <el-col :md="12">
+          <div class="aboutVedio">
+            <video
+              :src="require('@/assets/video/duanwu2.mp4')"
+              :poster="require('@/assets/video/cover2.jpg')"
+              controls="controls"
+            >
+              您的浏览器不支持 video 标签。
+            </video>
+          </div>
+        </el-col>
+        <el-col :md="12">
+          <div class="aboutVedio">
+            <video
+              :src="require('@/assets/video/duanwu1.mp4')"
+              :poster="require('@/assets/video/cover1.png')"
+              controls="controls"
+              poster="cover1"
+            >
+              您的浏览器不支持 video 标签。
+            </video>
+          </div>
+        </el-col>
+      </el-row>
     </div>
   </div>
 </template>
@@ -63,16 +88,39 @@ export default {
 
 <style lang="less" scoped>
 .features {
-  padding: 3rem 0 2rem;
+  padding: 3rem 0 0;
   background-color: var(--bgc);
   opacity: 0.9;
   .featuresContainer {
-    padding: 3rem 0.9375rem;
+    padding: 3rem 0.9375rem 0;
     max-width: 1400px;
     margin: 0 auto;
     .title {
       margin-bottom: 1.875rem;
       text-align: center;
+    }
+    .videoRow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 3.25rem;
+      .aboutVedio {
+        padding: 20px;
+        transition: all 0.2s;
+        border-radius: 10px;
+        cursor: pointer;
+        height: 25.125rem;
+        // width: 365px;
+        video {
+          width: 100%;
+          height: 100%;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.32), 0 0 6px rgba(0, 0, 0, 0.1);
+          object-fit: fill;
+          border-radius: 10px;
+        }
+        &:hover {
+        }
+      }
     }
   }
 }

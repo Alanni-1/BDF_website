@@ -3,6 +3,7 @@ import Index from '@/views/Index.vue'
 import Custom from '@/views/Custom.vue'
 import HistoryPeople from '@/views/HistoryPeople.vue'
 import HolidaySource from '@/views/HolidaySource.vue'
+import Test from '@/views/Test.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -28,6 +29,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/holiday/:id',
     name: 'Holiday',
     component: HolidaySource
+  },
+  {
+    path: '/test',
+    name: 'Test',
+    component: Test
   }
 ]
 

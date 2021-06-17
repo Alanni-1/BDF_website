@@ -8,11 +8,13 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "dplayer": "^1.26.0",
     "easy-typer-js": "^2.1.0",
     "element-plus": "^1.0.2-beta.46",
     "typed.js": "^2.0.12",
     "vue": "^3.0.0",
     "vue-class-component": "^8.0.0-0",
+    "vue-dplayer": "0.0.10",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"
   },
