@@ -8,3 +8,5 @@
 @import "./cssFolder/media.css";
 /* // element 样式修改 */
 @import "./cssFolder/modifyElement.css";
+/* // 引入动画库 */
+@import "./cssFolder/animate.css";

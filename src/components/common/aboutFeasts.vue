@@ -62,6 +62,7 @@ export default {
   padding: 3rem 3rem;
 
   background-color: var(--bgc);
+  transition: background-color 0.4s ease;
 
   color: var(--mainColor);
 

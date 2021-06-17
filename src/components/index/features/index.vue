@@ -90,7 +90,9 @@ export default {
 .features {
   padding: 3rem 0 0;
   background-color: var(--bgc);
+  transition: background-color 0.4s ease;
   opacity: 0.9;
+  
   .featuresContainer {
     padding: 3rem 0.9375rem 0;
     max-width: 1400px;
