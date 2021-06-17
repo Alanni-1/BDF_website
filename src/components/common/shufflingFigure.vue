@@ -48,7 +48,7 @@ export default {
         url: require('@/assets/image/ShufflingFigure4.jpg')
       },
       {
-        url: require('@/assets/image/ShufflingFigure4.jpg')
+        url: require('@/assets/image/ShufflingFigure1.jpg')
       }
     ]
     // 轮播函数
