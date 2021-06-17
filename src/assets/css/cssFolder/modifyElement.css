@@ -1,0 +1,31 @@
+/* 轮播图小圆点样式 */
+.el-carousel__indicator.is-active button {
+  background-color: var(--activeLink) !important;
+}
+
+.el-carousel__button {
+  background-color: #fff !important;
+  border-radius: 50% !important;
+  width: 10px !important;
+  height: 10px !important;
+}
+
+.el-carousel__indicators {
+  z-index: 3;
+}
+
+/* 分割线 */
+.el-divider__text {
+  background-color: var(--bgc) !important;
+}
+
+/* 分页 */
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+  background-color: var(--activeLink) !important;
+  color: #fff !important;
+
+}
+
+.el-pagination.is-background .el-pager li:not(.disabled):hover {
+  color: var(--activeLink);
+}

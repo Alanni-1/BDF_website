@@ -7,7 +7,7 @@
   ></Parallax>
   <BaseLayout class="wow fadeInUp">
     <template #title>
-      <DefaultTitle>节日由来 </DefaultTitle>
+      <DefaultTitle>人物简介</DefaultTitle>
     </template>
     <template #content>
       <div class="description">

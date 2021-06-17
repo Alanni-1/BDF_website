@@ -36,20 +36,19 @@ export default {
     let activeIndex = ref(0)
     let figureList = [
       {
+        url: require('@/assets/image/ShufflingFigure1.jpg')
+      },
+      {
         url: require('@/assets/image/ShufflingFigure2.jpg')
       },
-      {
-        url: require('@/assets/image/ShufflingFigure6.jpg')
-      },
-      {
-        url: require('@/assets/image/ShufflingFigure4.jpg')
-      },
-
       {
         url: require('@/assets/image/ShufflingFigure3.jpg')
       },
       {
-        url: require('@/assets/image/ShufflingFigure5.jpg')
+        url: require('@/assets/image/ShufflingFigure4.jpg')
+      },
+      {
+        url: require('@/assets/image/ShufflingFigure4.jpg')
       }
     ]
     // 轮播函数
@@ -108,7 +107,7 @@ export default {
     transform: translateX(-50%);
     display: flex;
     z-index: 3;
-    background-color: rgba(0, 0, 0, .2);
+    background-color: rgba(0, 0, 0, 0.2);
     padding: 5px;
     border-radius: 10px;
     .point {

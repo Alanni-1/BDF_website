@@ -9,7 +9,7 @@
     </div>
     <div class="main">
       <!-- 端午节 -->
-      <Celebrations class="wow fadeInUp"/>
+      <Celebrations class="wow fadeInUp" />
       <!-- 风俗 -->
       <CustomEntrance class="wow fadeInUp" />
       <!-- 起源 -->
