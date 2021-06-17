@@ -1,6 +1,6 @@
 <template>
   <!-- 轮播图组件 -->
-  <div class="shufflingFigure" :style="{ height: isScale }">
+  <div class="shufflingFigure">
     <!-- 展示4张图，但是要5张做无缝 -->
     <el-image
       v-for="(item, i) in figureList"
@@ -51,20 +51,6 @@ export default {
         url: require('@/assets/image/ShufflingFigure4.jpg')
       }
     ]
-    let { documentElement, body } = document
-    let scrollTop = ref(0)
-    let isScale = ref('100vh')
-    const showBtn = () => {
-      scrollTop.value =
-        window.pageYOffset || documentElement.scrollTop || body.scrollTop
-      if (scrollTop.value > 0) {
-        isScale.value = '70vh'
-      }
-    }
-
-    onMounted(() => {
-      window.addEventListener('scroll', showBtn, true)
-    })
     // 轮播函数
     const figureLoop = () => {
       ++activeIndex.value
@@ -86,7 +72,7 @@ export default {
       figuretTime = setInterval(figureLoop, 5000)
     }
 
-    return { figureList, activeIndex, changeActiveIndex, isScale }
+    return { figureList, activeIndex, changeActiveIndex }
   }
 }
 </script>
