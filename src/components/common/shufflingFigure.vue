@@ -44,7 +44,6 @@ export default {
       {
         url: require('@/assets/image/ShufflingFigure3.jpg')
       },
-
       {
         url: require('@/assets/image/ShufflingFigure4.jpg')
       },
@@ -108,7 +107,7 @@ export default {
     transform: translateX(-50%);
     display: flex;
     z-index: 3;
-    background-color: rgba(0, 0, 0, .2);
+    background-color: rgba(0, 0, 0, 0.2);
     padding: 5px;
     border-radius: 10px;
     .point {

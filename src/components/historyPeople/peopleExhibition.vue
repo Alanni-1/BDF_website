@@ -3,8 +3,9 @@
     :title="title"
     :description="description"
     :bg="background"
+    class="wow fadeInDown"
   ></Parallax>
-  <BaseLayout>
+  <BaseLayout class="wow fadeInUp">
     <template #title>
       <DefaultTitle>人物简介</DefaultTitle>
     </template>

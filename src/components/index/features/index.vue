@@ -121,8 +121,6 @@ export default {
           object-fit: fill;
           border-radius: 10px;
         }
-        &:hover {
-        }
       }
     }
   }
