@@ -25,26 +25,94 @@ export default {
     })
 
     // 返回顶部函数
+    var requestAnimationFrame =
+      window.requestAnimationFrame ||
+      window.webkitRequestAnimationFrame ||
+      window.mozRequestAnimationFrame ||
+      window.msRquestAnimationFrame ||
+      function(fn) {
+        setTimeout(fn, 15)
+      }
+      
+    const EasingFunctions = {
+      linear: function(t) {
+        return t
+      },
+      easeInQuad: function(t) {
+        return t * t
+      },
+      easeOutQuad: function(t) {
+        return t * (2 - t)
+      },
+      easeInOutQuad: function(t) {
+        return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t
+      },
+      easeInCubic: function(t) {
+        return t * t * t
+      },
+      easeOutCubic: function(t) {
+        return --t * t * t + 1
+      },
+      easeInOutCubic: function(t) {
+        return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1
+      },
+      easeInQuart: function(t) {
+        return t * t * t * t
+      },
+      easeOutQuart: function(t) {
+        return 1 - --t * t * t * t
+      },
+      easeInOutQuart: function(t) {
+        return t < 0.5 ? 8 * t * t * t * t : 1 - 8 * --t * t * t * t
+      },
+      easeInQuint: function(t) {
+        return t * t * t * t * t
+      },
+      easeOutQuint: function(t) {
+        return 1 + --t * t * t * t * t
+      },
+      easeInOutQuint: function(t) {
+        return t < 0.5 ? 16 * t * t * t * t * t : 1 + 16 * --t * t * t * t * t
+      }
+    }
+
+    let position = function(start, end, elapsed, duration) {
+      if (elapsed > duration) {
+        return end
+      }
+      return (
+        start +
+        (end - start) * EasingFunctions.easeInOutQuint(elapsed / duration)
+      )
+    }
+
+    let smoothScroll = function(el) {
+      console.log(position)
+      // var el = document.getElementsByClassName('header')[0]
+      let duration = 1000
+      let clock = Date.now()
+      let scrollTop =
+        window.pageYOffset ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop - el.offsetTop
+      let start = scrollTop
+      let end = 0
+      let step = function() {
+        console.log(1)
+        var elapsed = Date.now() - clock
+        var position_1 = position(start, end, elapsed, duration)
+        window.scrollTo(0, position_1)
+        if (elapsed > duration) {
+        } else {
+          requestAnimationFrame(step)
+        }
+      }
+      requestAnimationFrame(step)
+    }
+
     const btnClick = () => {
-      let currentOsTop = 0
-      var timer = setInterval(function () {
-        let osTop = documentElement.scrollTop || body.scrollTop
-
-        if (currentOsTop != 0 && osTop - currentOsTop > 5) {
-          clearInterval(timer)
-          return false
-        }
-
-        currentOsTop = osTop
-
-        let ispeed = Math.floor(-osTop / 5)
-
-        documentElement.scrollTop = body.scrollTop = osTop + ispeed
-
-        if (osTop === 0) {
-          clearInterval(timer)
-        }
-      }, 16)
+      var el = document.getElementsByClassName('header')[0]
+      smoothScroll(el)
     }
 
     return {

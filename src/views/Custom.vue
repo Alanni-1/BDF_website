@@ -6,18 +6,18 @@
       <div
         v-for="(item1, i1) in parallaxOptionArray"
         :key="i1"
-        class="customItem"
+        :class="{customItem: true, wow: true, fadeInUp: i1 !== 0}"
       >
         <!-- 端午习俗 -->
         <Parallax
           :title="item1.title"
           :description="item1.description"
           :bg="item1.img"
-          class="wow fadeInDown"
-        >
+          :class="{ wow: true, fadeInDown: i1 === 0 }"
+        > 
           <template #other> </template>
         </Parallax>
-        <div class="Text">
+        <div :class="{ Text: true, wow: true, fadeInUp: i1 === 0}">
           <p
             v-for="(item2, i2) in item1.customText"
             :key="i2"

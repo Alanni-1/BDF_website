@@ -1,18 +1,21 @@
 <template>
-  <div class="header">
-    <!-- 导航栏 -->
-    <NavigationBar/>
-  </div>
+  <div>
+    <div class="header">
+      <!-- 导航栏 -->
+      <NavigationBar />
+    </div>
 
-  <!-- <transition name="fade" mode="ease"> -->
+    <!-- <transition name="fade" mode="ease"> -->
     <router-view></router-view>
-  <!-- </transition> -->
-  <div class="footer">
-    <AboutFeasts class="wow fadeInUp"/>
-    <!-- 版权 -->
-    <Copyright class="wow fadeInUp"/>
-    <!-- 返回顶部 -->
-    <BackToTop class="wow fadeInRight" data-wow-delay="0.5s"/>
+    <!-- </transition> -->
+    <div class="footer">
+      <AboutFeasts class="wow fadeInUp" />
+      <!-- 版权 -->
+      <Copyright class="wow fadeInUp" />
+      <!-- 返回顶部 -->
+      <BackToTop class="wow fadeInRight" data-wow-delay="0.5s" />
+    </div>
+    <waves/>
   </div>
 </template>
 
@@ -26,16 +29,16 @@ import Copyright from '@/components/common/copyright.vue'
 // 返回顶部
 import BackToTop from '@/components/common/backToTop.vue'
 
+import waves from '@/components/common/waves.vue'
+
 export default {
   name: 'app',
-  setup() {
-    return {}
-  },
   components: {
     NavigationBar,
     AboutFeasts,
     Copyright,
     BackToTop,
+    waves
   }
 }
 </script>
