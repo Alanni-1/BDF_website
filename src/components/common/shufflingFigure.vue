@@ -36,19 +36,24 @@ export default {
     let activeIndex = ref(0)
     let figureList = [
       {
-        url: require('@/assets/image/ShufflingFigure1.jpg')
+        url: require('@/assets/image/ShufflingFigure2.jpg')
+        // url: 'https://ftp.bmp.ovh/imgs/2021/06/827bf368ac5090e1.jpg'
       },
       {
-        url: require('@/assets/image/ShufflingFigure2.jpg')
+        url: require('@/assets/image/ShufflingFigure1.jpg')
+        // url: 'https://ftp.bmp.ovh/imgs/2021/06/0d1ecc5934d4c7bf.jpg'
       },
       {
         url: require('@/assets/image/ShufflingFigure3.jpg')
+        // url: 'https://ftp.bmp.ovh/imgs/2021/06/3a2898b6bf8064ce.jpg'
       },
       {
         url: require('@/assets/image/ShufflingFigure4.jpg')
+        // url: 'https://ftp.bmp.ovh/imgs/2021/06/262eff528a3da4b5.jpg'
       },
       {
-        url: require('@/assets/image/ShufflingFigure1.jpg')
+        url: require('@/assets/image/ShufflingFigure2.jpg')
+        // url: 'https://ftp.bmp.ovh/imgs/2021/06/827bf368ac5090e1.jpg'
       }
     ]
     // 轮播函数

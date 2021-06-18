@@ -20,7 +20,7 @@
                 </div>
                 <div class="item-content">
                   <h3>{{ item.title }}</h3>
-                  <p>{{ item.answer }}</p>
+                  <p>{{ item.answer.slice(0,50) }} {{item.answer.length > 50 ? '...' : ''}}</p>
                 </div>
               </div>
             </el-card>
@@ -103,10 +103,11 @@ div.warp {
   div.item-warp {
     padding: 1rem;
     .item {
+
       cursor: pointer;
       .item-body {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
 
         .img-warp {
@@ -131,8 +132,6 @@ div.warp {
           }
 
           p {
-            height: 5rem;
-
             line-height: 28px;
           }
         }
