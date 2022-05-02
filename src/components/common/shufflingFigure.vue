@@ -62,7 +62,6 @@ export default {
       if (activeIndex.value + 1 === figureList.length) {
         activeIndex.value = 0
       }
-      console.log(activeIndex.value)
     }
     // 定时器
     let figuretTime = setInterval(figureLoop, 5000)

@@ -129,7 +129,6 @@ export default {
     }
     // window尺寸改变
     window.onresize = () => {
-      console.log(window.innerWidth)
 
       if (window.innerWidth <= 900) {
         // 展示切换按钮
@@ -154,9 +153,7 @@ export default {
     const goToSearch = () => {
       if (searchValue.value.trim().length !== 0) {
         window.open(`https://www.baidu.com/s?word=${searchValue.value}`)
-      }
-      console.log(1);
-      
+      }      
     }
 
     // 切换list
@@ -166,7 +163,6 @@ export default {
     // 切换夜间/白天模式
     const changeIsOpenDarkModel = () => {
       isOpenDarkModel.value = !isOpenDarkModel.value
-      console.log(isOpenDarkModel.value)
 
       // 修改颜色
       if (isOpenDarkModel.value) {

@@ -1,13 +1,16 @@
 <template>
+  <!-- 鼠标点击动画 -->
   <div data-tname="WaveItem">
     <div class="main-container">
       <div class="waves">
-        <div class="wave" v-for="(item, key) in waves" :key="key" :style="item">
-          <div
-            v-for="n in wavesConfig.total"
-            :key="n"
-            class="wave-item"
-            :style="{
+        <div class="wave"
+             v-for="(item, key) in waves"
+             :key="key"
+             :style="item">
+          <div v-for="n in wavesConfig.total"
+               :key="n"
+               class="wave-item"
+               :style="{
               transform: `scale(${0.1 * Math.sqrt(n - 1)})`, // 使得波纹大小指数增长
               opacity: 0.3 * (1 / n), // 因为相互层叠的波纹透明度会相互叠加，需要越小的波纹透明度越低，以免中心颜色过重
               animationDelay: `${(n - 1) * 0.12}s`, // 越大的波纹越晚出现，以呈现波纹逐渐扩散的效果
@@ -15,8 +18,7 @@
                 n * 0.3 +
                 parseInt(item.width) * 0.002}s`, // 波纹动画时间渐增，表现波纹向外扩散渐慢的效果,波纹尺寸越大动画时间越长。
               backgroundColor: wavesConfig.waveColor
-            }"
-          ></div>
+            }"></div>
         </div>
       </div>
     </div>
@@ -40,8 +42,8 @@ export default {
       delay: 5000,
       timeoutId: null
     })
-    
-    const createWave = (e) => {
+
+    const createWave = e => {
       // 让新生成的波纹始终在之前波纹的上层产生叠加效果
       if (wavesConfig.zIndexCount > 99999) {
         wavesConfig.zIndexCount = 999
@@ -62,7 +64,7 @@ export default {
         height: `${waveSize}px`
       })
     }
-    
+
     const intervalClearWave = () => {
       clearTimeout(clear.timeoutId)
       clear.timeoutId = setTimeout(() => {
@@ -80,7 +82,7 @@ export default {
       wavesConfig,
       clear
     }
-  },
+  }
 }
 </script>
 
