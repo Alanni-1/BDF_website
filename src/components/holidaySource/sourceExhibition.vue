@@ -1,9 +1,10 @@
 <template>
-  <!-- 节日由来 -->
-  <Parallax :title="title"
-            :description="description"
-            :bg="background"
-            class="wow fadeInDown"></Parallax>
+  <Parallax
+    :title="title"
+    :description="description"
+    :bg="background"
+    class="wow fadeInDown"
+  ></Parallax>
   <BaseLayout class="wow fadeInUp">
     <template #title>
       <DefaultTitle>节日由来 </DefaultTitle>

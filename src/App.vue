@@ -13,10 +13,9 @@
       <!-- 版权 -->
       <Copyright class="wow fadeInUp" />
       <!-- 返回顶部 -->
-      <BackToTop class="wow fadeInRight"
-                 data-wow-delay="0.5s" />
+      <BackToTop class="wow fadeInRight" data-wow-delay="0.5s" />
     </div>
-    <waves />
+    <waves/>
   </div>
 </template>
 
@@ -29,7 +28,7 @@ import AboutFeasts from '@/components/common/aboutFeasts.vue'
 import Copyright from '@/components/common/copyright.vue'
 // 返回顶部
 import BackToTop from '@/components/common/backToTop.vue'
-// 鼠标特效
+
 import waves from '@/components/common/waves.vue'
 
 export default {

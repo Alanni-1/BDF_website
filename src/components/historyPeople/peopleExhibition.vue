@@ -1,9 +1,10 @@
 <template>
-  <!-- 人物介绍 -->
-  <Parallax :title="title"
-            :description="description"
-            :bg="background"
-            class="wow fadeInDown"></Parallax>
+  <Parallax
+    :title="title"
+    :description="description"
+    :bg="background"
+    class="wow fadeInDown"
+  ></Parallax>
   <BaseLayout class="wow fadeInUp">
     <template #title>
       <DefaultTitle>人物简介</DefaultTitle>

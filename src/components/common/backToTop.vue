@@ -1,8 +1,6 @@
-// 返回顶部组件
 <template>
   <div class="back-to-top">
-    <el-button @click="btnClick"
-               v-show="scrollTop">
+    <el-button @click="btnClick" v-show="scrollTop">
       <i class="iconfont icon-fanhuidingbu"></i>
     </el-button>
   </div>
@@ -32,53 +30,53 @@ export default {
       window.webkitRequestAnimationFrame ||
       window.mozRequestAnimationFrame ||
       window.msRquestAnimationFrame ||
-      function (fn) {
+      function(fn) {
         setTimeout(fn, 15)
       }
-
+      
     const EasingFunctions = {
-      linear: function (t) {
+      linear: function(t) {
         return t
       },
-      easeInQuad: function (t) {
+      easeInQuad: function(t) {
         return t * t
       },
-      easeOutQuad: function (t) {
+      easeOutQuad: function(t) {
         return t * (2 - t)
       },
-      easeInOutQuad: function (t) {
+      easeInOutQuad: function(t) {
         return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t
       },
-      easeInCubic: function (t) {
+      easeInCubic: function(t) {
         return t * t * t
       },
-      easeOutCubic: function (t) {
+      easeOutCubic: function(t) {
         return --t * t * t + 1
       },
-      easeInOutCubic: function (t) {
+      easeInOutCubic: function(t) {
         return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1
       },
-      easeInQuart: function (t) {
+      easeInQuart: function(t) {
         return t * t * t * t
       },
-      easeOutQuart: function (t) {
+      easeOutQuart: function(t) {
         return 1 - --t * t * t * t
       },
-      easeInOutQuart: function (t) {
+      easeInOutQuart: function(t) {
         return t < 0.5 ? 8 * t * t * t * t : 1 - 8 * --t * t * t * t
       },
-      easeInQuint: function (t) {
+      easeInQuint: function(t) {
         return t * t * t * t * t
       },
-      easeOutQuint: function (t) {
+      easeOutQuint: function(t) {
         return 1 + --t * t * t * t * t
       },
-      easeInOutQuint: function (t) {
+      easeInOutQuint: function(t) {
         return t < 0.5 ? 16 * t * t * t * t * t : 1 + 16 * --t * t * t * t * t
       }
     }
 
-    let position = function (start, end, elapsed, duration) {
+    let position = function(start, end, elapsed, duration) {
       if (elapsed > duration) {
         return end
       }
@@ -88,7 +86,8 @@ export default {
       )
     }
 
-    let smoothScroll = function (el) {
+    let smoothScroll = function(el) {
+      console.log(position)
       // var el = document.getElementsByClassName('header')[0]
       let duration = 1000
       let clock = Date.now()
@@ -98,7 +97,7 @@ export default {
         document.body.scrollTop - el.offsetTop
       let start = scrollTop
       let end = 0
-      let step = function () {
+      let step = function() {
         console.log(1)
         var elapsed = Date.now() - clock
         var position_1 = position(start, end, elapsed, duration)
