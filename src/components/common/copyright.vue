@@ -5,7 +5,7 @@
       <el-col class="copyright-info" :md="12" :sm="24">
         <p>
           ©
-          2021广东省高校技术高级技工学校-18计算机高技升读-文慧涛三-版权所有
+          2021广东省高校技术高级技工学校-18计算机高技升读-文慧涛-版权所有
         </p>
       </el-col>
       <el-col class="copyright-contact" :md="6" :sm="24">
